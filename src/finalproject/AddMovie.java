@@ -5,6 +5,8 @@
  */
 package finalproject;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author FX8800
@@ -28,7 +30,7 @@ public class AddMovie extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        BtnAdd = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -44,7 +46,12 @@ public class AddMovie extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Add");
+        BtnAdd.setText("Add");
+        BtnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -52,14 +59,14 @@ public class AddMovie extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(137, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(BtnAdd)
                 .addGap(39, 39, 39))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jButton1)
+                .addComponent(BtnAdd)
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
@@ -179,6 +186,25 @@ public class AddMovie extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void BtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAddActionPerformed
+
+        ArrayList<String> movie = new ArrayList<String>();
+        ArrayList<String> genre = new ArrayList<String>();
+        ArrayList<String> rating = new ArrayList<String>();
+        ArrayList<String> year = new ArrayList<String>();
+        String movname = txtInsMovie.getText();
+        String gen = txtInsGenre.getText();
+        String rat = txtInsRating.getText();
+        String tahun = txtInsYear.getText();
+        
+        movie.add(movname);
+        genre.add(gen);
+        rating.add(rat);
+        year.add(tahun);
+        
+        
+    }//GEN-LAST:event_BtnAddActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -215,7 +241,7 @@ public class AddMovie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BtnAdd;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -225,9 +251,9 @@ public class AddMovie extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField txtInsGenre;
-    private javax.swing.JTextField txtInsMovie;
-    private javax.swing.JTextField txtInsRating;
-    private javax.swing.JTextField txtInsYear;
+    public static javax.swing.JTextField txtInsGenre;
+    public static javax.swing.JTextField txtInsMovie;
+    public static javax.swing.JTextField txtInsRating;
+    public static javax.swing.JTextField txtInsYear;
     // End of variables declaration//GEN-END:variables
 }
