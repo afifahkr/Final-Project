@@ -5,6 +5,10 @@
  */
 package finalproject;
 
+import static finalproject.Result1.txtGenre;
+import static finalproject.Result1.txtMovie;
+import static finalproject.Result1.txtRating;
+import static finalproject.Result1.txtYear;
 import java.util.ArrayList;
 
 /**
@@ -36,11 +40,11 @@ public class AddMovie extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         txtInsMovie = new javax.swing.JTextField();
         txtInsGenre = new javax.swing.JTextField();
         txtInsRating = new javax.swing.JTextField();
         txtInsYear = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -78,8 +82,6 @@ public class AddMovie extends javax.swing.JFrame {
 
         jLabel4.setText("Year");
 
-        jTextField1.setText("Insert Description");
-
         txtInsMovie.setText("Insert...");
 
         txtInsGenre.setText("Insert...");
@@ -88,6 +90,8 @@ public class AddMovie extends javax.swing.JFrame {
 
         txtInsYear.setText("Insert...");
 
+        jTextField2.setText("Insert Description");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -95,7 +99,6 @@ public class AddMovie extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -111,7 +114,8 @@ public class AddMovie extends javax.swing.JFrame {
                             .addComponent(txtInsGenre, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtInsMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtInsRating, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(305, Short.MAX_VALUE))))
+                        .addContainerGap(305, Short.MAX_VALUE))
+                    .addComponent(jTextField2)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,9 +136,8 @@ public class AddMovie extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtInsYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addComponent(jTextField1)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField2))
         );
 
         jLabel5.setText("jLabel5");
@@ -192,6 +195,8 @@ public class AddMovie extends javax.swing.JFrame {
         ArrayList<String> genre = new ArrayList<String>();
         ArrayList<String> rating = new ArrayList<String>();
         ArrayList<String> year = new ArrayList<String>();
+        
+        for (int i=0; i<Result1.getText(); i++){
         String movname = txtInsMovie.getText();
         String gen = txtInsGenre.getText();
         String rat = txtInsRating.getText();
@@ -202,7 +207,12 @@ public class AddMovie extends javax.swing.JFrame {
         rating.add(rat);
         year.add(tahun);
         
+        txtMovie.setText(txtInsMovie.getText());
+        txtGenre.setText(txtInsGenre.getText());
+        txtRating.setText(txtInsRating.getText());
+        txtYear.setText(txtInsYear.getText());
         
+        }
     }//GEN-LAST:event_BtnAddActionPerformed
 
     /**
@@ -250,7 +260,7 @@ public class AddMovie extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     public static javax.swing.JTextField txtInsGenre;
     public static javax.swing.JTextField txtInsMovie;
     public static javax.swing.JTextField txtInsRating;
