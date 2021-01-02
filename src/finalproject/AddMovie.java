@@ -195,8 +195,7 @@ public class AddMovie extends javax.swing.JFrame {
         ArrayList<String> genre = new ArrayList<String>();
         ArrayList<String> rating = new ArrayList<String>();
         ArrayList<String> year = new ArrayList<String>();
-        
-        for (int i=0; i<Result1.getText(); i++){
+      
         String movname = txtInsMovie.getText();
         String gen = txtInsGenre.getText();
         String rat = txtInsRating.getText();
@@ -207,12 +206,87 @@ public class AddMovie extends javax.swing.JFrame {
         rating.add(rat);
         year.add(tahun);
         
+        movie.add(" The autopsy of jane doe ");
+        genre.add(" Horror ");
+        rating.add(" **** ");
+        year.add(" 2016 ");
+        
+        movie.add(" A quiet place ");
+        genre.add(" Horror ");
+        rating.add(" *** ");
+        year.add(" 2018 ");
+        
+        movie.add(" The Babadook ");
+        genre.add(" Horror ");
+        rating.add(" *** ");
+        year.add(" 2014 ");
+        
+        movie.add(" Limitless ");
+        genre.add(" Action ");
+        rating.add(" *** ");
+        year.add(" 2011 ");
+        
+        movie.add(" Logan ");
+        genre.add(" Action ");
+        rating.add(" **** ");
+        year.add(" 2017 ");
+        
+        movie.add(" Inception ");
+        genre.add(" Action ");
+        rating.add(" **** ");
+        year.add(" 2010 ");
+        
+        movie.add(" Love at the second sight ");
+        genre.add(" Drama ");
+        rating.add(" **** ");
+        year.add(" 2019 ");
+        
+        movie.add(" Imperfect ");
+        genre.add(" Drama ");
+        rating.add(" *** ");
+        year.add(" 2019 ");
+        
+        movie.add(" Nanti kita cerita tentang hari ini ");
+        genre.add(" Drama ");
+        rating.add(" **** ");
+        year.add(" 2019 ");
+        
+        movie.add(" Little Woman ");
+        genre.add(" Romance ");
+        rating.add(" **** ");
+        year.add(" 2020 ");
+        
+        movie.add(" Five feet apart ");
+        genre.add(" Romance ");
+        rating.add(" *** ");
+        year.add(" 2019 ");
+        
+        movie.add(" Yesterday ");
+        genre.add(" Romance ");
+        rating.add(" *** ");
+        year.add(" 2019 ");
+        
+        movie.add(" Onward ");
+        genre.add(" Fantasy ");
+        rating.add(" **** ");
+        year.add(" 2020 ");
+        
+        movie.add(" Pan’s Labyrinth ");
+        genre.add(" Romance ");
+        rating.add(" **** ");
+        year.add(" 2006 ");
+        
+        movie.add(" The Lord of the Rings: The Return of the King ");
+        genre.add(" Romance ");
+        rating.add(" **** ");
+        year.add(" 2003 ");
+        
         txtMovie.setText(txtInsMovie.getText());
         txtGenre.setText(txtInsGenre.getText());
         txtRating.setText(txtInsRating.getText());
         txtYear.setText(txtInsYear.getText());
         
-        }
+        
     }//GEN-LAST:event_BtnAddActionPerformed
 
     /**
