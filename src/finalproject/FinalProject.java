@@ -16,6 +16,9 @@ public class FinalProject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MainMenu mm = new MainMenu();
+        mm.setLocationRelativeTo(null);
+        mm.setVisible(true);
         
     }
     
