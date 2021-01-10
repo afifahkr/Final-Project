@@ -54,6 +54,7 @@ public class Result1 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("Movie Name");
 
         jLabel2.setText("Rating");
