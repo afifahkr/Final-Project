@@ -9,9 +9,12 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import com.jtattoo.plaf.bernstein.BernsteinLookAndFeel;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+
 /**
  *
  * @author FX8800
@@ -118,6 +121,11 @@ public class MainMenu extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 11)); // NOI18N
         jButton2.setText("Advanced Search");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 1, 12)); // NOI18N
         jLabel7.setText("Advanced Search!");
@@ -258,10 +266,299 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
        String[] yearString = { "2000++", "2000--" };
        cbRat yearList = new cbRat(yearString);
-       yearList.setSelectedIndex(4);
+       yearList.setSelectedIndex(2);
        yearList.addActionListener(this);
        this.setVisible(true);
     }//GEN-LAST:event_cbYearActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+
+        String a = cbGenre.getSelectedItem().toString();
+        String b = cbRat.getSelectedItem().toString();
+        int c = cbGenre.getSelectedIndex();
+        int d = cbRat.getSelectedIndex();
+        ArrayList<String> movie = new ArrayList<String>();
+        ArrayList<String> year = new ArrayList<String>();
+        ArrayList<String> genre = new ArrayList<String>();
+        ArrayList<String> rating = new ArrayList<String>();
+        ArrayList<String> horror1 = new ArrayList<String>();
+        ArrayList<String> horror2 = new ArrayList<String>();
+        ArrayList<String> horror3 = new ArrayList<String>();
+        ArrayList<String> horror4 = new ArrayList<String>();
+        ArrayList<String> horror5 = new ArrayList<String>();
+        ArrayList<String> action1 = new ArrayList<String>();
+        ArrayList<String> action2 = new ArrayList<String>();
+        ArrayList<String> action3 = new ArrayList<String>();
+        ArrayList<String> action4 = new ArrayList<String>();
+        ArrayList<String> action5 = new ArrayList<String>();
+        ArrayList<String> fantasy1 = new ArrayList<String>();
+        ArrayList<String> fantasy2 = new ArrayList<String>();
+        ArrayList<String> fantasy3 = new ArrayList<String>();
+        ArrayList<String> fantasy4 = new ArrayList<String>();
+        ArrayList<String> fantasy5 = new ArrayList<String>();
+        ArrayList<String> drama1 = new ArrayList<String>();
+        ArrayList<String> drama2 = new ArrayList<String>();
+        ArrayList<String> drama3 = new ArrayList<String>();
+        ArrayList<String> drama4 = new ArrayList<String>();
+        ArrayList<String> drama5 = new ArrayList<String>();
+        ArrayList<String> romance1 = new ArrayList<String>();
+        ArrayList<String> romance2 = new ArrayList<String>();
+        ArrayList<String> romance3 = new ArrayList<String>();
+        ArrayList<String> romance4 = new ArrayList<String>();
+        ArrayList<String> romance5 = new ArrayList<String>();
+ 
+
+        if(c == 0 && d == 0 ){
+            ClassificationMenu.lblMovie1.setText(horror1.get(0));
+            ClassificationMenu.lblMovie2.setText(horror1.get(1));
+            ClassificationMenu.lblMovie3.setText(horror1.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 0 && d == 1){
+            ClassificationMenu.lblMovie1.setText(horror2.get(0));
+            ClassificationMenu.lblMovie2.setText(horror2.get(1));
+            ClassificationMenu.lblMovie3.setText(horror2.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 0 && d == 2){
+            ClassificationMenu.lblMovie1.setText(horror3.get(0));
+            ClassificationMenu.lblMovie2.setText(horror3.get(1));
+            ClassificationMenu.lblMovie3.setText(horror3.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 0 && d == 3){
+            ClassificationMenu.lblMovie1.setText(horror4.get(0));
+            ClassificationMenu.lblMovie2.setText(horror4.get(1));
+            ClassificationMenu.lblMovie3.setText(horror4.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 0 && d == 4){
+            ClassificationMenu.lblMovie1.setText(horror5.get(0));
+            ClassificationMenu.lblMovie2.setText(horror5.get(1));
+            ClassificationMenu.lblMovie3.setText(horror5.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 1 && d == 0){
+            ClassificationMenu.lblMovie1.setText(action1.get(0));
+            ClassificationMenu.lblMovie2.setText(action1.get(1));
+            ClassificationMenu.lblMovie3.setText(action1.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 1 && d == 1){
+           ClassificationMenu.lblMovie1.setText(action2.get(0));
+            ClassificationMenu.lblMovie2.setText(action2.get(1));
+            ClassificationMenu.lblMovie3.setText(action2.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 1 && d == 2){
+            ClassificationMenu.lblMovie1.setText(action3.get(0));
+            ClassificationMenu.lblMovie2.setText(action3.get(1));
+            ClassificationMenu.lblMovie3.setText(action3.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 1 && d == 3){
+            ClassificationMenu.lblMovie1.setText(action4.get(0));
+            ClassificationMenu.lblMovie2.setText(action4.get(1));
+            ClassificationMenu.lblMovie3.setText(action4.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 1 && d == 4){
+           ClassificationMenu.lblMovie1.setText(action5.get(0));
+            ClassificationMenu.lblMovie2.setText(action5.get(1));
+            ClassificationMenu.lblMovie3.setText(action5.get(2));
+        } else if (c == 2 && d == 0){
+           ClassificationMenu.lblMovie1.setText(fantasy1.get(0));
+            ClassificationMenu.lblMovie2.setText(fantasy1.get(1));
+            ClassificationMenu.lblMovie3.setText(fantasy1.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 2 && d == 1){
+            ClassificationMenu.lblMovie1.setText(fantasy2.get(0));
+            ClassificationMenu.lblMovie2.setText(fantasy2.get(1));
+            ClassificationMenu.lblMovie3.setText(fantasy2.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 2 && d == 2){
+           ClassificationMenu.lblMovie1.setText(fantasy3.get(0));
+            ClassificationMenu.lblMovie2.setText(fantasy3.get(1));
+            ClassificationMenu.lblMovie3.setText(fantasy3.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 2 && d == 3){
+            ClassificationMenu.lblMovie1.setText(fantasy4.get(0));
+            ClassificationMenu.lblMovie2.setText(fantasy4.get(1));
+            ClassificationMenu.lblMovie3.setText(fantasy4.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 2 && d == 4){
+           ClassificationMenu.lblMovie1.setText(fantasy5.get(0));
+            ClassificationMenu.lblMovie2.setText(fantasy5.get(1));
+            ClassificationMenu.lblMovie3.setText(fantasy5.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 3 && d == 0){
+            ClassificationMenu.lblMovie1.setText(romance1.get(0));
+            ClassificationMenu.lblMovie2.setText(romance1.get(1));
+            ClassificationMenu.lblMovie3.setText(romance1.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 3 && d == 1){
+           ClassificationMenu.lblMovie1.setText(romance2.get(0));
+            ClassificationMenu.lblMovie2.setText(romance2.get(1));
+            ClassificationMenu.lblMovie3.setText(romance2.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 3 && d == 2){
+           ClassificationMenu.lblMovie1.setText(romance3.get(0));
+            ClassificationMenu.lblMovie2.setText(romance3.get(1));
+            ClassificationMenu.lblMovie3.setText(romance3.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 3 && d == 3){
+          ClassificationMenu.lblMovie1.setText(romance4.get(0));
+            ClassificationMenu.lblMovie2.setText(romance4.get(1));
+            ClassificationMenu.lblMovie3.setText(romance4.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 3 && d == 4){
+           ClassificationMenu.lblMovie1.setText(romance5.get(0));
+            ClassificationMenu.lblMovie2.setText(romance5.get(1));
+            ClassificationMenu.lblMovie3.setText(romance5.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 4 && d == 0){
+           ClassificationMenu.lblMovie1.setText(drama1.get(0));
+            ClassificationMenu.lblMovie2.setText(drama1.get(1));
+            ClassificationMenu.lblMovie3.setText(drama1.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 4 && d == 1){
+            ClassificationMenu.lblMovie1.setText(drama2.get(0));
+            ClassificationMenu.lblMovie2.setText(drama2.get(1));
+            ClassificationMenu.lblMovie3.setText(drama2.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 4 && d == 2){
+            ClassificationMenu.lblMovie1.setText(drama3.get(0));
+            ClassificationMenu.lblMovie2.setText(drama3.get(1));
+            ClassificationMenu.lblMovie3.setText(drama3.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 4 && d == 3){
+            ClassificationMenu.lblMovie1.setText(drama4.get(0));
+            ClassificationMenu.lblMovie2.setText(drama4.get(1));
+            ClassificationMenu.lblMovie3.setText(drama4.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        } else if (c == 4 && d == 4){
+            ClassificationMenu.lblMovie1.setText(drama5.get(0));
+            ClassificationMenu.lblMovie2.setText(drama5.get(1));
+            ClassificationMenu.lblMovie3.setText(drama5.get(2));
+            ClassificationMenu.lblGenre1.setText(a);
+            ClassificationMenu.lblGenre2.setText(a);
+            ClassificationMenu.lblGenre3.setText(a);
+            ClassificationMenu.lblRating1.setText(b);
+            ClassificationMenu.lblRating2.setText(b);
+            ClassificationMenu.lblRating3.setText(b);
+        }
+
+        
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
