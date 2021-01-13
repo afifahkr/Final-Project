@@ -30,9 +30,10 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
-        Image icon = Toolkit.getDefaultToolkit().getImage("src/finalproject/Logo2.png");
+       Image icon = Toolkit.getDefaultToolkit().getImage("src/finalproject/Logo2.png");
         setIconImage(icon);
         setTitle("DP MSE");
+     
 
     }
 
@@ -59,7 +60,7 @@ public class MainMenu extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtSearch = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         jLabel3.setText("jLabel3");
@@ -84,7 +85,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,11 +193,11 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(0, 206, 201));
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255)));
 
-        jTextField1.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 12)); // NOI18N
-        jTextField1.setText("Search...");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtSearch.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 12)); // NOI18N
+        txtSearch.setText("Search...");
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtSearchActionPerformed(evt);
             }
         });
 
@@ -204,6 +205,11 @@ public class MainMenu extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 11)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/iconmonstr-magnifier-4-16.png"))); // NOI18N
         jButton1.setText("Search Movie");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -216,14 +222,14 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(116, 116, 116))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(76, 76, 76))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(177, 177, 177)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -258,9 +264,9 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtSearchActionPerformed
 
     private void cbGenreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbGenreActionPerformed
         // TODO add your handling code here:
@@ -298,11 +304,18 @@ public class MainMenu extends javax.swing.JFrame {
         String b = cbRat.getSelectedItem().toString();
         int c = cbGenre.getSelectedIndex();
         int d = cbRat.getSelectedIndex();
+        int n = 25; 
+        ArrayList<ArrayList<String> > aList =  
+                  new ArrayList<ArrayList<String> >(n); 
+        
         ArrayList<String> movie = new ArrayList<String>();
         ArrayList<String> year = new ArrayList<String>();
         ArrayList<String> genre = new ArrayList<String>();
         ArrayList<String> rating = new ArrayList<String>();
         ArrayList<String> horror1 = new ArrayList<String>();
+        horror1.add("huhu");
+        horror1.add("123");
+        horror1.add("hakdhjsfl");
         ArrayList<String> horror2 = new ArrayList<String>();
         ArrayList<String> horror3 = new ArrayList<String>();
         ArrayList<String> horror4 = new ArrayList<String>();
@@ -327,6 +340,34 @@ public class MainMenu extends javax.swing.JFrame {
         ArrayList<String> romance3 = new ArrayList<String>();
         ArrayList<String> romance4 = new ArrayList<String>();
         ArrayList<String> romance5 = new ArrayList<String>();
+        
+        aList.add(horror1);
+        aList.add(horror2);
+        aList.add(horror3);
+        aList.add(horror4);
+        aList.add(horror5);
+        aList.add(action1);
+        aList.add(action2);
+        aList.add(action3);
+        aList.add(action4);
+        aList.add(action5);
+        aList.add(drama1);
+        aList.add(drama2);
+        aList.add(drama3);
+        aList.add(drama4);
+        aList.add(drama5);
+        aList.add(romance1);
+        aList.add(romance2);
+        aList.add(romance3);
+        aList.add(romance4);
+        aList.add(romance5);
+        aList.add(fantasy1);
+        aList.add(fantasy2);
+        aList.add(fantasy3);
+        aList.add(fantasy4);
+        aList.add(fantasy5);
+        
+        
  
 
         if(c == 0 && d == 0 ){
@@ -579,6 +620,18 @@ public class MainMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String search = txtSearch.getText();
+        if (search.equalsIgnoreCase("Big Hero Six")){
+            Result1.txtMovie.setText("BIg Hero Six,2013");
+            Result1.txtGenre.setText("Fantasy");
+            Result1.txtRating.setText("****");
+            Result1.jTextArea1.setText("Cerita seorang pemuda bernama Hiro yang tinggal bersama kakaknya untuk mewujudkan impian membuat sebuah robot, namun setelah kakaknay meninggal. Kehidupan Hiro berubah.Apa sebenarnya yang di simpan sang kakak?");
+
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -611,7 +664,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 
     private void add(cbGenre cb) {
