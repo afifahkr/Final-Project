@@ -1,0 +1,284 @@
+        String movname = txtInsMovie.getText();
+        String tahun = txtInsYear.getText();
+        String a = cbGenre.getSelectedItem().toString();
+        String b = cbRat.getSelectedItem().toString();
+        int c = cbGenre.getSelectedIndex();
+        int d = cbRat.getSelectedIndex();
+        ArrayList<String> movie = new ArrayList<String>();
+        ArrayList<String> rating = new ArrayList<String>();
+        ArrayList<String> genre = new ArrayList<String>();
+        
+        ArrayList<String> year1 = new ArrayList<String>();
+        ArrayList<String> horror1 = new ArrayList<String>();
+        
+        ArrayList<String> year2 = new ArrayList<String>();
+        ArrayList<String> horror2 = new ArrayList<String>();
+        
+        ArrayList<String> year3 = new ArrayList<String>();
+        ArrayList<String> horror3 = new ArrayList<String>();
+        
+        ArrayList<String> year4 = new ArrayList<String>();
+        ArrayList<String> horror4 = new ArrayList<String>();
+        
+        ArrayList<String> year5 = new ArrayList<String>();
+        ArrayList<String> horror5 = new ArrayList<String>();
+        
+        ArrayList<String> year6 = new ArrayList<String>();
+        ArrayList<String> action1 = new ArrayList<String>();
+        
+        ArrayList<String> year7 = new ArrayList<String>();
+        ArrayList<String> action2 = new ArrayList<String>();
+        
+        ArrayList<String> year8 = new ArrayList<String>();
+        ArrayList<String> action3 = new ArrayList<String>();
+        
+        ArrayList<String> year9 = new ArrayList<String>();
+        ArrayList<String> action4 = new ArrayList<String>();
+        
+        ArrayList<String> year10 = new ArrayList<String>();
+        ArrayList<String> action5 = new ArrayList<String>();
+        
+        ArrayList<String> year11 = new ArrayList<String>();
+        ArrayList<String> fantasy1 = new ArrayList<String>();
+        
+        ArrayList<String> year12 = new ArrayList<String>();
+        ArrayList<String> fantasy2 = new ArrayList<String>();
+        
+        ArrayList<String> year13 = new ArrayList<String>();
+        ArrayList<String> fantasy3 = new ArrayList<String>();
+        
+        ArrayList<String> year14 = new ArrayList<String>();
+        ArrayList<String> fantasy4 = new ArrayList<String>();
+        
+        ArrayList<String> year15 = new ArrayList<String>();
+        ArrayList<String> fantasy5 = new ArrayList<String>();
+        
+        ArrayList<String> year16 = new ArrayList<String>();
+        ArrayList<String> drama1 = new ArrayList<String>();
+        
+        ArrayList<String> year17 = new ArrayList<String>();
+        ArrayList<String> drama2 = new ArrayList<String>();
+        
+        ArrayList<String> year18 = new ArrayList<String>();
+        ArrayList<String> drama3 = new ArrayList<String>();
+        
+        ArrayList<String> year19 = new ArrayList<String>();
+        ArrayList<String> drama4 = new ArrayList<String>();
+        
+        ArrayList<String> year20 = new ArrayList<String>();
+        ArrayList<String> drama5 = new ArrayList<String>();
+        
+        ArrayList<String> year21 = new ArrayList<String>();
+        ArrayList<String> romance1 = new ArrayList<String>();
+        
+        ArrayList<String> year22 = new ArrayList<String>();
+        ArrayList<String> romance2 = new ArrayList<String>();
+        
+        ArrayList<String> year23 = new ArrayList<String>();
+        ArrayList<String> romance3 = new ArrayList<String>();
+        
+        ArrayList<String> year24 = new ArrayList<String>();
+        ArrayList<String> romance4 = new ArrayList<String>();
+        
+        ArrayList<String> year25 = new ArrayList<String>();
+        ArrayList<String> romance5 = new ArrayList<String>();
+        
+
+
+                   
+            
+        
+
+        
+        if(c == 0 && d == 0 ){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year1.add(tahun);
+            horror1.add(movname);
+        } else if (c == 0 && d == 1){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year2.add(tahun);
+            horror2.add(movname);
+        } else if (c == 0 && d == 2){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year3.add(tahun);
+            horror3.add(movname);
+        } else if (c == 0 && d == 3){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year4.add(tahun);
+            horror4.add(movname);
+        } else if (c == 0 && d == 4){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year5.add(tahun);
+            horror5.add(movname);
+        } else if (c == 1 && d == 0){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year6.add(tahun);
+            action1.add(movname);
+        } else if (c == 1 && d == 1){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year7.add(tahun);
+            action2.add(movname);
+        } else if (c == 1 && d == 2){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year8.add(tahun);
+            action3.add(movname);
+        } else if (c == 1 && d == 3){
+            movie.add(movname);
+           rating.add(b);
+            genre.add(a);
+            year9.add(tahun);
+            action4.add(movname);
+        } else if (c == 1 && d == 4){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year10.add(tahun);
+            action5.add(movname);
+        } else if (c == 2 && d == 0){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year11.add(tahun);
+            fantasy1.add(movname);
+        } else if (c == 2 && d == 1){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year12.add(tahun);
+            fantasy2.add(movname);
+        } else if (c == 2 && d == 2){
+            movie.add(movname);
+           rating.add(b);
+            genre.add(a);
+            year13.add(tahun);
+            fantasy3.add(movname);
+        } else if (c == 2 && d == 3){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year14.add(tahun);
+            fantasy4.add(movname);
+        } else if (c == 2 && d == 4){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year14.add(tahun);
+            fantasy5.add(movname);
+        } else if (c == 3 && d == 0){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year21.add(tahun);
+            romance1.add(movname);
+        } else if (c == 3 && d == 1){
+            movie.add(movname);
+           rating.add(b);
+            genre.add(a);
+            year22.add(tahun);
+            romance2.add(movname);
+        } else if (c == 3 && d == 2){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year23.add(tahun);
+            romance3.add(movname);
+        } else if (c == 3 && d == 3){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year24.add(tahun);
+            romance4.add(movname);
+        } else if (c == 3 && d == 4){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year25.add(tahun);
+            romance5.add(movname);
+        } else if (c == 4 && d == 0){
+            movie.add(movname);
+          rating.add(b);
+            genre.add(a);
+            year16.add(tahun);
+            drama1.add(movname);
+        } else if (c == 4 && d == 1){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year17.add(tahun);
+            drama2.add(movname);
+        } else if (c == 4 && d == 2){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year18.add(tahun);
+            drama3.add(movname);
+        } else if (c == 4 && d == 3){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year19.add(tahun);
+            drama4.add(movname);
+        } else if (c == 4 && d == 4){
+            movie.add(movname);
+            rating.add(b);
+            genre.add(a);
+            year20.add(tahun);
+            drama5.add(movname);
+        }
+
+        try {
+            FileWriter film = new FileWriter("Horror1.txt", true);
+            film.write("Movie Name: " + horror1);
+            film.write(System.getProperty("line.separator"));
+            film.write("Year: " + year1);
+            film.write(System.getProperty("line.separator"));
+            film.write("genre: " + a);
+            film.write(System.getProperty("line.separator"));
+            film.write("rating: " + b);
+            film.write(System.getProperty("line.separator"));
+            
+            film.close();
+            
+            JOptionPane.showMessageDialog(rootPane, "Success\nData Saved!");
+            
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(rootPane, "Text cant be null or year number in alphabet!");
+        }
+         try {
+            FileWriter film = new FileWriter("Horror2.txt", true);
+            film.write("Movie Name: " + horror2);
+            film.write(System.getProperty("line.separator"));
+            film.write("Year: " + year1);
+            film.write(System.getProperty("line.separator"));
+            film.write("genre: " + a);
+            film.write(System.getProperty("line.separator"));
+            film.write("rating: " + b);
+            film.write(System.getProperty("line.separator"));
+            
+            film.close();
+            
+            JOptionPane.showMessageDialog(rootPane, "Success\nData Saved!");
+            
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(rootPane, "Text cant be null or year number in alphabet!");
+        }
