@@ -642,11 +642,11 @@ public class MainMenu extends javax.swing.JFrame {
         if ( search.equals(e)){
             Result1.txtMovie.setText(e.toString());
         }
-       /* if (search.equalsIgnoreCase("Big Hero Six")){
+        if (search.equalsIgnoreCase("Big Hero Six")){
             Result1.txtMovie.setText("BIg Hero Six,2013");
             Result1.txtGenre.setText("Fantasy");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Cerita seorang pemuda bernama Hiro yang "
+            Result1.txtDesc.setText("Cerita seorang pemuda bernama Hiro yang "
                     + "tinggal bersama kakaknya untuk mewujudkan impian membuat sebuah robot, "
                     + "namun setelah kakaknay meninggal. Kehidupan Hiro berubah.Apa sebenarnya "
                    + "yang di simpan sang kakak?");
@@ -654,7 +654,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Pan's Labyrinth, 2006");
             Result1.txtGenre.setText("Fantasy");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Narasi dalam film mencampur antara dunia nyata dengan "
+            Result1.txtDesc.setText("Narasi dalam film mencampur antara dunia nyata dengan "
                     + "sebuah dunia gaib yang berpusat di sekitar sebuah labirin tua yang telah "
                     + "ditinggalkan dan seekor makhluk faun yang misterius yang bertemu dengan tokoh utama,"
                     + " Ofelia. Ayah tiri Ofelia, seorang Falangis, Kapten Vidal, "
@@ -666,7 +666,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Onward, 2020");
             Result1.txtGenre.setText("Fantasy");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Bertempat di pinggiran kota dunia fantasi, dua saudara peri remaja, "
+            Result1.txtDesc.setText("Bertempat di pinggiran kota dunia fantasi, dua saudara peri remaja, "
                     + "Ian dan Barley Lightfoot, melakukan perjalanan untuk menemukan apakah masih "
                     + "ada sedikit keajaiban yang tersisa di sana untuk menghabiskan satu hari terakhir"
                     + " bersama ayah mereka, yang meninggal ketika mereka terlalu muda untuk bisa mengingatnya.");
@@ -674,7 +674,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Yesterday, 2019");
             Result1.txtGenre.setText("Romance");
             Result1.txtRating.setText("***");
-            Result1.jTextArea1.setText("Film ini memiliki cerita berdasarkan lagu-lagu dari band legendaris The Beatles. "
+            Result1.txtDesc.setText("Film ini memiliki cerita berdasarkan lagu-lagu dari band legendaris The Beatles. "
                     + "Film Yesterday mengajak penonton untuk dapat sedikit berfikir dan membayangkan, "
                     + "jika saja tidak ada lagi satu pun yang tahu mengenai The Beatles dan karya-karyanya. "
                     + "Satu-satunya orang di dunia yang dapat mengingat The Beatles yakni Jack Malik (Himesh Patel).");
@@ -682,7 +682,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Five Feet Apart, 2019");
             Result1.txtGenre.setText("Romance");
             Result1.txtRating.setText("***");
-            Result1.jTextArea1.setText("Berkisah tentang kisah asmara dua orang pasien cystic fibrosis. "
+            Result1.txtDesc.setText("Berkisah tentang kisah asmara dua orang pasien cystic fibrosis. "
                     + "Stella Grant merupakan gadis berusia 17 tahun dengan penyakit langka, cystic fibrosis. "
                     + "Seperti halnya remaja lainnya, Stella menyukai media sosial dan berbagi kisahnya, "
                     + "yang sebagian besar tentang kehidupannya di rumah sakit. "
@@ -693,7 +693,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Little Woman, 2019");
             Result1.txtGenre.setText("Romance");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Little Women bercerita tentang empat saudara perempuan dalam satu keluarga. "
+            Result1.txtDesc.setText("Little Women bercerita tentang empat saudara perempuan dalam satu keluarga. "
                     + "Mereka adalah Jo (Ronan), Meg (Emma Watson), Amy (Florence Pugh) and Beth March (Eliza Scanlen) "
                     + "dengan Marmee (Laura Dern) sebagai ibu mereka. Ada pula sosok lain seperti tante March "
                     + "(Meryl Streep) dan tetangga mereka Laurie (Timothee Chalamet). "
@@ -704,7 +704,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Nanti Kita Cerita Tentang Hari Ini, 2019");
             Result1.txtGenre.setText("Drama");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("NKCTHI berkisah mengenai kakak beradik yang hidup dalam keluarga yang "
+            Result1.txtDesc.setText("NKCTHI berkisah mengenai kakak beradik yang hidup dalam keluarga yang "
                     + "tampak bahagia.Setelah mengalami kegagalan besar pertamanya, Awan berkenalan dengan Kale,"
                     + " seorang cowok eksentrik yang memberikan Awan pengalaman hidup baru, tentang patah, "
                     + "bangun, jatuh, tumbuh, hilang dan semua ketakutan manusia pada umumnya."
@@ -715,21 +715,21 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Imperfect, 2019");
             Result1.txtGenre.setText("Drama");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Film Imperfect berkisah tentang Rara yang tak peduli "
+            Result1.txtDesc.setText("Film Imperfect berkisah tentang Rara yang tak peduli "
                     + "dengan ejekan orang lain, mengenai bentuk tubuhnya "
                     + "yang tidak proporsional.");
         }else if (search.equalsIgnoreCase("Love At The Second Sight")){
             Result1.txtMovie.setText("Love at The Second Sight, 2019");
             Result1.txtGenre.setText("Drama");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Film Love at Second Sight bercerita tentang upaya "
+            Result1.txtDesc.setText("Film Love at Second Sight bercerita tentang upaya "
                     + "seorang pria untuk mendapatkan kembali cinta istrinya di "
                     + "kesempatan kedua setelah prahara yang menimpa rumah tangganya.");
         }else if (search.equalsIgnoreCase("Inception")){
             Result1.txtMovie.setText("Inception, 2010");
             Result1.txtGenre.setText("Action");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Inception bercerita tentang seorang pencuri lihai bernama Adam Cobb"
+            Result1.txtDesc.setText("Inception bercerita tentang seorang pencuri lihai bernama Adam Cobb"
                     + "yang melakukan aksinya dengan cara nggak biasa. Mereka akan "
                     + "menyusup ke alam bawah sadar targetnya dengan menggunakan "
                     + "teknologi militer esperimental dan mencuri informasi "
@@ -738,7 +738,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Logan, 2017");
             Result1.txtGenre.setText("Action");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Logan (Hugh Jackman) diceritakan sudah berusia tua."
+            Result1.txtDesc.setText("Logan (Hugh Jackman) diceritakan sudah berusia tua."
                     + "Logan sendiri sudah bertahun-tahun berjanji untuk tidak menggunakan "
                     + "kekuatan cakarnya untuk tujuan ‘berdarah’, dan kemampuan "
                     + "penyembuhannya pun sudah mulai melemah. Namun, janjinya itu terpaksa "
@@ -748,7 +748,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("Limitless, 2011");
             Result1.txtGenre.setText("Action");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Eddie Morra (Bradley Cooper) memang seorang pecundang."
+            Result1.txtDesc.setText("Eddie Morra (Bradley Cooper) memang seorang pecundang."
                     + "Pertemuannya dengan seorang sobat lama membuat masa depan Eddie "
                     + "tiba-tiba saja berubah total. Pertemuan tak sengaja itu memperkenalkan "
                     + "Eddie Morra pada MTD-48, obat yang konon bisa memacu kerja otak "
@@ -759,7 +759,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("The Babadook, 2014");
             Result1.txtGenre.setText("Horror");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Seorang ibu single-parent, dihantui kematian tragis suaminya, "
+            Result1.txtDesc.setText("Seorang ibu single-parent, dihantui kematian tragis suaminya, "
                     + "ketakutan anaknya akan sesosok monster yang berkeliaran dirumah, "
                     + "dan lambat laun mulai menyadari sesuatu yang jahat "
                     + "yang terus berada disekelilingnya.");
@@ -767,7 +767,7 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("A Quiet Place, 2018");
             Result1.txtGenre.setText("Horror");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Film ini dibintangi Krasinski, Emily Blunt, Millicent Simmonds,"
+            Result1.txtDesc.setText("Film ini dibintangi Krasinski, Emily Blunt, Millicent Simmonds,"
                     + " dan Noah Jupe. Filmnya bercerita tentang empat orang anggota keluarga "
                     + "yang harus menjalani hidup dalam kesunyian sambil bersembunyi "
                     + "dari makhluk yang berburu dengan suara.");
@@ -775,18 +775,18 @@ public class MainMenu extends javax.swing.JFrame {
             Result1.txtMovie.setText("The Autopsy Of Jane Doe, 2016");
             Result1.txtGenre.setText("Horror");
             Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("The Autopsy of Jane Doe bercerita tentang seorang mayat perempuan"
+            Result1.txtDesc.setText("The Autopsy of Jane Doe bercerita tentang seorang mayat perempuan"
                     + " tanpa identitas di tempat kejadian perkara pembunuhan. Polisi membawa mayat"
                     + " perempuan tersebut ke sebuah rumah otopsi yang dikeloka oleh ayah bernama Tommy"
                     + " dan anaknya, AustinTommy dan Austin kebingungan saat sedang mengautopsi tubuh "
-                    + "Jane Doe karena banyak kejanggalan terjadi.");*/
+                    + "Jane Doe karena banyak kejanggalan terjadi.");
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) throws Exception{
+    /*public static void main(String args[]) throws Exception{
        try{
        } catch (Exception e){
            System.out.println(e);
@@ -796,11 +796,11 @@ public class MainMenu extends javax.swing.JFrame {
          //   public void run() {
          //       new MainMenu().setVisible(true);
           //  }
-     //   });
+     //   });*/
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JComboBox<String> cbGenre;
+    public static javax.swing.JComboBox<String> cbGenre;
     public static javax.swing.JComboBox<String> cbRat;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
