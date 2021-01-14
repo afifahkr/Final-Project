@@ -33,9 +33,11 @@ public class MainMenu extends javax.swing.JFrame {
        Image icon = Toolkit.getDefaultToolkit().getImage("src/finalproject/Logo2.png");
         setIconImage(icon);
         setTitle("DP MSE");
+    }
+    AddMovie menu = new AddMovie();
      
 
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,9 +56,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         cbGenre = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         cbRat = new javax.swing.JComboBox<>();
-        cbYear = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -113,22 +113,11 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
         jLabel4.setText("Rating");
 
-        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
-        jLabel5.setText("Year");
-
         cbRat.setFont(new java.awt.Font("Sylfaen", 1, 11)); // NOI18N
         cbRat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbRat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbRatActionPerformed(evt);
-            }
-        });
-
-        cbYear.setFont(new java.awt.Font("Sylfaen", 1, 11)); // NOI18N
-        cbYear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbYear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbYearActionPerformed(evt);
             }
         });
 
@@ -152,21 +141,21 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel4))
-                            .addComponent(jLabel5))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(205, 205, 205))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbGenre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbRat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(41, 41, 41))
+                            .addComponent(cbRat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(113, 113, 113))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,12 +171,8 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(cbRat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(cbYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(0, 206, 201));
@@ -287,93 +272,127 @@ public class MainMenu extends javax.swing.JFrame {
        this.setVisible(true);
     }//GEN-LAST:event_cbRatActionPerformed
 
-    private void cbYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbYearActionPerformed
-        // TODO add your handling code here:
-       String[] yearString = { "2000++", "2000--" };
-       cbRat yearList = new cbRat(yearString);
-       yearList.setSelectedIndex(2);
-       yearList.addActionListener(this);
-       this.setVisible(true);
-    }//GEN-LAST:event_cbYearActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
+        ArrayList<String> e = menu.horrorList().get(0);
+        ArrayList<String> e1 = menu.horrorList().get(1);
+        ArrayList<String> e2 = menu.horrorList().get(2);
+        ArrayList<String> e3 = menu.horrorList().get(3);
+        ArrayList<String> e4 = menu.horrorList().get(4);
+        String f = e.get(0);
+        String g = e.get(1);
+        String h = e.get(2);
+        String f1 = e1.get(0);
+        String g1 = e1.get(1);
+        String h1 = e1.get(2);
+        String f2 = e2.get(0);
+        String g2 = e2.get(1);
+        String h2 = e2.get(2);
+        String f3 = e3.get(0);
+        String g3 = e3.get(1);
+        String h3 = e3.get(2);
+        String f4 = e4.get(0);
+        String g4 = e4.get(1);
+        String h4 = e4.get(2);
+       
+        ArrayList<String> ea = menu.fantasyList().get(0);
+        ArrayList<String> ea1 = menu.fantasyList().get(1);
+        ArrayList<String> ea2 = menu.fantasyList().get(2);
+        ArrayList<String> ea3= menu.fantasyList().get(3);
+        ArrayList<String> ea4 = menu.fantasyList().get(4);
+        String fa = ea.get(0);
+        String ga = ea.get(1);
+        String ha = ea.get(2);
+        String fa1 = ea1.get(0);
+        String ga1 = ea1.get(1);
+        String ha1 = ea1.get(2);
+        String fa2 = ea2.get(0);
+        String ga2 = ea2.get(1);
+        String ha2 = ea2.get(2);
+        String fa3 = ea3.get(0);
+        String ga3 = ea3.get(1);
+        String ha3 = ea3.get(2);
+        String fa4 = ea4.get(0);
+        String ga4 = ea4.get(1);
+        String ha4 = ea4.get(2);
+        
+        ArrayList<String> eb = menu.dramaList().get(0);
+        ArrayList<String> eb1 = menu.dramaList().get(1);
+        ArrayList<String> eb2 = menu.dramaList().get(2);
+        ArrayList<String> eb3= menu.dramaList().get(3);
+        ArrayList<String> eb4 = menu.dramaList().get(4);
+        String fb = eb.get(0);
+        String gb = eb.get(1);
+        String hb = eb.get(2);
+        String fb1 = eb1.get(0);
+        String gb1 = eb1.get(1);
+        String hb1 = eb1.get(2);
+        String fb2 = eb2.get(0);
+        String gb2 = eb2.get(1);
+        String hb2 = eb2.get(2);
+        String fb3 = eb3.get(0);
+        String gb3 = eb3.get(1);
+        String hb3 = eb3.get(2);
+        String fb4 = eb4.get(0);
+        String gb4 = eb4.get(1);
+        String hb4 = eb4.get(2);
+        
+        ArrayList<String> ec = menu.romanceList().get(0);
+        ArrayList<String> ec1 = menu.romanceList().get(1);
+        ArrayList<String> ec2 = menu.romanceList().get(2);
+        ArrayList<String> ec3= menu.romanceList().get(3);
+        ArrayList<String> ec4 = menu.romanceList().get(4);
+        String fc = ec.get(0);
+        String gc = ec.get(1);
+        String hc = ec.get(2);
+        String fc1 = ec1.get(0);
+        String gc1 = ec1.get(1);
+        String hc1 = ec1.get(2);
+        String fc2 = ec2.get(0);
+        String gc2 = ec2.get(1);
+        String hc2 = ec2.get(2);
+        String fc3 = ec3.get(0);
+        String gc3 = ec3.get(1);
+        String hc3 = ec3.get(2);
+        String fc4 = ec4.get(0);
+        String gc4 = ec4.get(1);
+        String hc4 = ec4.get(2);
+        
+        ArrayList<String> ed = menu.actionList().get(0);
+        ArrayList<String> ed1 = menu.actionList().get(1);
+        ArrayList<String> ed2 = menu.actionList().get(2);
+        ArrayList<String> ed3= menu.actionList().get(3);
+        ArrayList<String> ed4 = menu.actionList().get(4);
+        String fd = ed.get(0);
+        String gd = ed.get(1);
+        String hd = ed.get(2);
+        String fd1 = ed1.get(0);
+        String gd1 = ed1.get(1);
+        String hd1 = ed1.get(2);
+        String fd2 = ed2.get(0);
+        String gd2 = ed2.get(1);
+        String hd2 = ed2.get(2);
+        String fd3 = ed3.get(0);
+        String gd3 = ed3.get(1);
+        String hd3 = ed3.get(2);
+        String fd4 = ed4.get(0);
+        String gd4 = ed4.get(1);
+        String hd4 = ed4.get(2);
+        
+ 
+       
 
         String a = cbGenre.getSelectedItem().toString();
         String b = cbRat.getSelectedItem().toString();
         int c = cbGenre.getSelectedIndex();
         int d = cbRat.getSelectedIndex();
-        int n = 25; 
-        ArrayList<ArrayList<String> > aList =  
-                  new ArrayList<ArrayList<String> >(n); 
-        
-        ArrayList<String> movie = new ArrayList<String>();
-        ArrayList<String> year = new ArrayList<String>();
-        ArrayList<String> genre = new ArrayList<String>();
-        ArrayList<String> rating = new ArrayList<String>();
-        ArrayList<String> horror1 = new ArrayList<String>();
-        horror1.add("huhu");
-        horror1.add("123");
-        horror1.add("hakdhjsfl");
-        ArrayList<String> horror2 = new ArrayList<String>();
-        ArrayList<String> horror3 = new ArrayList<String>();
-        ArrayList<String> horror4 = new ArrayList<String>();
-        ArrayList<String> horror5 = new ArrayList<String>();
-        ArrayList<String> action1 = new ArrayList<String>();
-        ArrayList<String> action2 = new ArrayList<String>();
-        ArrayList<String> action3 = new ArrayList<String>();
-        ArrayList<String> action4 = new ArrayList<String>();
-        ArrayList<String> action5 = new ArrayList<String>();
-        ArrayList<String> fantasy1 = new ArrayList<String>();
-        ArrayList<String> fantasy2 = new ArrayList<String>();
-        ArrayList<String> fantasy3 = new ArrayList<String>();
-        ArrayList<String> fantasy4 = new ArrayList<String>();
-        ArrayList<String> fantasy5 = new ArrayList<String>();
-        ArrayList<String> drama1 = new ArrayList<String>();
-        ArrayList<String> drama2 = new ArrayList<String>();
-        ArrayList<String> drama3 = new ArrayList<String>();
-        ArrayList<String> drama4 = new ArrayList<String>();
-        ArrayList<String> drama5 = new ArrayList<String>();
-        ArrayList<String> romance1 = new ArrayList<String>();
-        ArrayList<String> romance2 = new ArrayList<String>();
-        ArrayList<String> romance3 = new ArrayList<String>();
-        ArrayList<String> romance4 = new ArrayList<String>();
-        ArrayList<String> romance5 = new ArrayList<String>();
-        
-        aList.add(horror1);
-        aList.add(horror2);
-        aList.add(horror3);
-        aList.add(horror4);
-        aList.add(horror5);
-        aList.add(action1);
-        aList.add(action2);
-        aList.add(action3);
-        aList.add(action4);
-        aList.add(action5);
-        aList.add(drama1);
-        aList.add(drama2);
-        aList.add(drama3);
-        aList.add(drama4);
-        aList.add(drama5);
-        aList.add(romance1);
-        aList.add(romance2);
-        aList.add(romance3);
-        aList.add(romance4);
-        aList.add(romance5);
-        aList.add(fantasy1);
-        aList.add(fantasy2);
-        aList.add(fantasy3);
-        aList.add(fantasy4);
-        aList.add(fantasy5);
-        
-        
  
 
         if(c == 0 && d == 0 ){
-            ClassificationMenu.lblMovie1.setText(horror1.get(0));
-            ClassificationMenu.lblMovie2.setText(horror1.get(1));
-            ClassificationMenu.lblMovie3.setText(horror1.get(2));
+            ClassificationMenu.lblMovie1.setText(f);
+            ClassificationMenu.lblMovie2.setText(g);
+            ClassificationMenu.lblMovie3.setText(h);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -381,9 +400,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 0 && d == 1){
-            ClassificationMenu.lblMovie1.setText(horror2.get(0));
-            ClassificationMenu.lblMovie2.setText(horror2.get(1));
-            ClassificationMenu.lblMovie3.setText(horror2.get(2));
+            ClassificationMenu.lblMovie1.setText(f1);
+            ClassificationMenu.lblMovie2.setText(g1);
+            ClassificationMenu.lblMovie3.setText(h1);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -391,9 +410,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 0 && d == 2){
-            ClassificationMenu.lblMovie1.setText(horror3.get(0));
-            ClassificationMenu.lblMovie2.setText(horror3.get(1));
-            ClassificationMenu.lblMovie3.setText(horror3.get(2));
+            ClassificationMenu.lblMovie1.setText(f2);
+            ClassificationMenu.lblMovie2.setText(g2);
+            ClassificationMenu.lblMovie3.setText(h2);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -401,9 +420,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 0 && d == 3){
-            ClassificationMenu.lblMovie1.setText(horror4.get(0));
-            ClassificationMenu.lblMovie2.setText(horror4.get(1));
-            ClassificationMenu.lblMovie3.setText(horror4.get(2));
+            ClassificationMenu.lblMovie1.setText(f3);
+            ClassificationMenu.lblMovie2.setText(g3);
+            ClassificationMenu.lblMovie3.setText(h3);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -411,9 +430,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 0 && d == 4){
-            ClassificationMenu.lblMovie1.setText(horror5.get(0));
-            ClassificationMenu.lblMovie2.setText(horror5.get(1));
-            ClassificationMenu.lblMovie3.setText(horror5.get(2));
+            ClassificationMenu.lblMovie1.setText(f4);
+            ClassificationMenu.lblMovie2.setText(g4);
+            ClassificationMenu.lblMovie3.setText(h4);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -421,9 +440,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 1 && d == 0){
-            ClassificationMenu.lblMovie1.setText(action1.get(0));
-            ClassificationMenu.lblMovie2.setText(action1.get(1));
-            ClassificationMenu.lblMovie3.setText(action1.get(2));
+            ClassificationMenu.lblMovie1.setText(fd);
+            ClassificationMenu.lblMovie2.setText(gd);
+            ClassificationMenu.lblMovie3.setText(hd);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -431,9 +450,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 1 && d == 1){
-           ClassificationMenu.lblMovie1.setText(action2.get(0));
-            ClassificationMenu.lblMovie2.setText(action2.get(1));
-            ClassificationMenu.lblMovie3.setText(action2.get(2));
+           ClassificationMenu.lblMovie1.setText(fd1);
+            ClassificationMenu.lblMovie2.setText(gd1);
+            ClassificationMenu.lblMovie3.setText(hd1);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -441,9 +460,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 1 && d == 2){
-            ClassificationMenu.lblMovie1.setText(action3.get(0));
-            ClassificationMenu.lblMovie2.setText(action3.get(1));
-            ClassificationMenu.lblMovie3.setText(action3.get(2));
+            ClassificationMenu.lblMovie1.setText(fd2);
+            ClassificationMenu.lblMovie2.setText(gd2);
+            ClassificationMenu.lblMovie3.setText(hd2);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -451,9 +470,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 1 && d == 3){
-            ClassificationMenu.lblMovie1.setText(action4.get(0));
-            ClassificationMenu.lblMovie2.setText(action4.get(1));
-            ClassificationMenu.lblMovie3.setText(action4.get(2));
+            ClassificationMenu.lblMovie1.setText(fd3);
+            ClassificationMenu.lblMovie2.setText(gd3);
+            ClassificationMenu.lblMovie3.setText(hd3);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -461,13 +480,13 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 1 && d == 4){
-           ClassificationMenu.lblMovie1.setText(action5.get(0));
-            ClassificationMenu.lblMovie2.setText(action5.get(1));
-            ClassificationMenu.lblMovie3.setText(action5.get(2));
+           ClassificationMenu.lblMovie1.setText(fd4);
+            ClassificationMenu.lblMovie2.setText(gd4);
+            ClassificationMenu.lblMovie3.setText(hd4);
         } else if (c == 2 && d == 0){
-           ClassificationMenu.lblMovie1.setText(fantasy1.get(0));
-            ClassificationMenu.lblMovie2.setText(fantasy1.get(1));
-            ClassificationMenu.lblMovie3.setText(fantasy1.get(2));
+           ClassificationMenu.lblMovie1.setText(fa);
+            ClassificationMenu.lblMovie2.setText(ga);
+            ClassificationMenu.lblMovie3.setText(ha);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -475,9 +494,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 2 && d == 1){
-            ClassificationMenu.lblMovie1.setText(fantasy2.get(0));
-            ClassificationMenu.lblMovie2.setText(fantasy2.get(1));
-            ClassificationMenu.lblMovie3.setText(fantasy2.get(2));
+            ClassificationMenu.lblMovie1.setText(fa1);
+            ClassificationMenu.lblMovie2.setText(ga1);
+            ClassificationMenu.lblMovie3.setText(ha1);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -485,9 +504,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 2 && d == 2){
-           ClassificationMenu.lblMovie1.setText(fantasy3.get(0));
-            ClassificationMenu.lblMovie2.setText(fantasy3.get(1));
-            ClassificationMenu.lblMovie3.setText(fantasy3.get(2));
+           ClassificationMenu.lblMovie1.setText(fa2);
+            ClassificationMenu.lblMovie2.setText(ga2);
+            ClassificationMenu.lblMovie3.setText(ha2);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -495,9 +514,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 2 && d == 3){
-            ClassificationMenu.lblMovie1.setText(fantasy4.get(0));
-            ClassificationMenu.lblMovie2.setText(fantasy4.get(1));
-            ClassificationMenu.lblMovie3.setText(fantasy4.get(2));
+            ClassificationMenu.lblMovie1.setText(fa3);
+            ClassificationMenu.lblMovie2.setText(ga3);
+            ClassificationMenu.lblMovie3.setText(ha3);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -505,9 +524,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 2 && d == 4){
-           ClassificationMenu.lblMovie1.setText(fantasy5.get(0));
-            ClassificationMenu.lblMovie2.setText(fantasy5.get(1));
-            ClassificationMenu.lblMovie3.setText(fantasy5.get(2));
+           ClassificationMenu.lblMovie1.setText(fa4);
+            ClassificationMenu.lblMovie2.setText(ga4);
+            ClassificationMenu.lblMovie3.setText(ha4);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -515,9 +534,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 3 && d == 0){
-            ClassificationMenu.lblMovie1.setText(romance1.get(0));
-            ClassificationMenu.lblMovie2.setText(romance1.get(1));
-            ClassificationMenu.lblMovie3.setText(romance1.get(2));
+            ClassificationMenu.lblMovie1.setText(fc);
+            ClassificationMenu.lblMovie2.setText(gc);
+            ClassificationMenu.lblMovie3.setText(hc);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -525,9 +544,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 3 && d == 1){
-           ClassificationMenu.lblMovie1.setText(romance2.get(0));
-            ClassificationMenu.lblMovie2.setText(romance2.get(1));
-            ClassificationMenu.lblMovie3.setText(romance2.get(2));
+           ClassificationMenu.lblMovie1.setText(fc1);
+            ClassificationMenu.lblMovie2.setText(gc1);
+            ClassificationMenu.lblMovie3.setText(hc1);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -535,9 +554,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 3 && d == 2){
-           ClassificationMenu.lblMovie1.setText(romance3.get(0));
-            ClassificationMenu.lblMovie2.setText(romance3.get(1));
-            ClassificationMenu.lblMovie3.setText(romance3.get(2));
+           ClassificationMenu.lblMovie1.setText(fc2);
+            ClassificationMenu.lblMovie2.setText(gc2);
+            ClassificationMenu.lblMovie3.setText(hc2);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -545,9 +564,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 3 && d == 3){
-          ClassificationMenu.lblMovie1.setText(romance4.get(0));
-            ClassificationMenu.lblMovie2.setText(romance4.get(1));
-            ClassificationMenu.lblMovie3.setText(romance4.get(2));
+          ClassificationMenu.lblMovie1.setText(fc3);
+            ClassificationMenu.lblMovie2.setText(gc3);
+            ClassificationMenu.lblMovie3.setText(hc3);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -555,9 +574,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 3 && d == 4){
-           ClassificationMenu.lblMovie1.setText(romance5.get(0));
-            ClassificationMenu.lblMovie2.setText(romance5.get(1));
-            ClassificationMenu.lblMovie3.setText(romance5.get(2));
+           ClassificationMenu.lblMovie1.setText(fc4);
+            ClassificationMenu.lblMovie2.setText(gc4);
+            ClassificationMenu.lblMovie3.setText(hc4);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -565,9 +584,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 4 && d == 0){
-           ClassificationMenu.lblMovie1.setText(drama1.get(0));
-            ClassificationMenu.lblMovie2.setText(drama1.get(1));
-            ClassificationMenu.lblMovie3.setText(drama1.get(2));
+           ClassificationMenu.lblMovie1.setText(fb);
+            ClassificationMenu.lblMovie2.setText(gb);
+            ClassificationMenu.lblMovie3.setText(hb);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -575,9 +594,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 4 && d == 1){
-            ClassificationMenu.lblMovie1.setText(drama2.get(0));
-            ClassificationMenu.lblMovie2.setText(drama2.get(1));
-            ClassificationMenu.lblMovie3.setText(drama2.get(2));
+            ClassificationMenu.lblMovie1.setText(fb1);
+            ClassificationMenu.lblMovie2.setText(gb1);
+            ClassificationMenu.lblMovie3.setText(hb1);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -585,9 +604,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 4 && d == 2){
-            ClassificationMenu.lblMovie1.setText(drama3.get(0));
-            ClassificationMenu.lblMovie2.setText(drama3.get(1));
-            ClassificationMenu.lblMovie3.setText(drama3.get(2));
+            ClassificationMenu.lblMovie1.setText(fb2);
+            ClassificationMenu.lblMovie2.setText(gb2);
+            ClassificationMenu.lblMovie3.setText(hb2);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -595,9 +614,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 4 && d == 3){
-            ClassificationMenu.lblMovie1.setText(drama4.get(0));
-            ClassificationMenu.lblMovie2.setText(drama4.get(1));
-            ClassificationMenu.lblMovie3.setText(drama4.get(2));
+            ClassificationMenu.lblMovie1.setText(fb3);
+            ClassificationMenu.lblMovie2.setText(gb3);
+            ClassificationMenu.lblMovie3.setText(hb3);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -605,9 +624,9 @@ public class MainMenu extends javax.swing.JFrame {
             ClassificationMenu.lblRating2.setText(b);
             ClassificationMenu.lblRating3.setText(b);
         } else if (c == 4 && d == 4){
-            ClassificationMenu.lblMovie1.setText(drama5.get(0));
-            ClassificationMenu.lblMovie2.setText(drama5.get(1));
-            ClassificationMenu.lblMovie3.setText(drama5.get(2));
+            ClassificationMenu.lblMovie1.setText(fb4);
+            ClassificationMenu.lblMovie2.setText(gb4);
+            ClassificationMenu.lblMovie3.setText(hb4);
             ClassificationMenu.lblGenre1.setText(a);
             ClassificationMenu.lblGenre2.setText(a);
             ClassificationMenu.lblGenre3.setText(a);
@@ -623,13 +642,11 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String search = txtSearch.getText();
-        if (search.equalsIgnoreCase("Big Hero Six")){
-            Result1.txtMovie.setText("BIg Hero Six,2013");
-            Result1.txtGenre.setText("Fantasy");
-            Result1.txtRating.setText("****");
-            Result1.jTextArea1.setText("Cerita seorang pemuda bernama Hiro yang tinggal bersama kakaknya untuk mewujudkan impian membuat sebuah robot, namun setelah kakaknay meninggal. Kehidupan Hiro berubah.Apa sebenarnya yang di simpan sang kakak?");
-
+        ArrayList<String> e = menu.horrorList().get(0);
+        if ( search.equals(e)){
+            Result1.txtMovie.setText(e.toString());
         }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -649,16 +666,14 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cbGenre;
-    private javax.swing.JComboBox<String> cbRat;
-    private javax.swing.JComboBox<String> cbYear;
+    public static javax.swing.JComboBox<String> cbGenre;
+    public static javax.swing.JComboBox<String> cbRat;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;

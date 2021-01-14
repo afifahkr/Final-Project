@@ -22,6 +22,7 @@ public class ClassificationMenu extends javax.swing.JFrame {
         this.setLayout(null);
         
     }
+    AddMovie menu = new AddMovie();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,16 +43,10 @@ public class ClassificationMenu extends javax.swing.JFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         lblGenre1 = new javax.swing.JLabel();
         lblRating1 = new javax.swing.JLabel();
-        lblYear1 = new javax.swing.JLabel();
         lblGenre2 = new javax.swing.JLabel();
         lblRating2 = new javax.swing.JLabel();
         lblRating3 = new javax.swing.JLabel();
-        lblYear2 = new javax.swing.JLabel();
-        lblYear3 = new javax.swing.JLabel();
         lblGenre3 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         btnChoose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,6 +58,11 @@ public class ClassificationMenu extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jRadioButton1.setText("Select");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         lblMovie1.setText("Movie Name");
 
@@ -78,73 +78,46 @@ public class ClassificationMenu extends javax.swing.JFrame {
 
         lblRating1.setText("Rating");
 
-        lblYear1.setText("Year");
-
         lblGenre2.setText("Genre");
 
         lblRating2.setText("Rating");
 
         lblRating3.setText("Rating");
 
-        lblYear2.setText("Year");
-
-        lblYear3.setText("Year");
-
         lblGenre3.setText("Genre");
-
-        jLabel17.setText("Movie Pic");
-
-        jLabel18.setText("Movie Pic");
-
-        jLabel19.setText("Movie Pic");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMovie1)
+                    .addComponent(jRadioButton1)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
+                        .addGap(10, 10, 10)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMovie1)
-                            .addComponent(jRadioButton1)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblRating1)
-                                    .addComponent(lblGenre1)
-                                    .addComponent(lblYear1)))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel17)))
+                            .addComponent(lblRating1)
+                            .addComponent(lblGenre1))))
                 .addGap(117, 117, 117)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblMovie2)
                     .addComponent(jRadioButton2)
                     .addComponent(lblGenre2)
-                    .addComponent(lblRating2)
-                    .addComponent(lblYear2)
-                    .addComponent(jLabel18))
+                    .addComponent(lblRating2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblMovie3)
                     .addComponent(jRadioButton3)
                     .addComponent(lblRating3)
-                    .addComponent(lblYear3)
-                    .addComponent(lblGenre3)
-                    .addComponent(jLabel19))
+                    .addComponent(lblGenre3))
                 .addGap(60, 60, 60))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel19))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addContainerGap(366, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMovie1)
                     .addComponent(lblMovie2)
@@ -159,12 +132,7 @@ public class ClassificationMenu extends javax.swing.JFrame {
                     .addComponent(lblRating1)
                     .addComponent(lblRating2)
                     .addComponent(lblRating3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblYear1)
-                    .addComponent(lblYear2)
-                    .addComponent(lblYear3))
-                .addGap(18, 18, 18)
+                .addGap(38, 38, 38)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1)
                     .addComponent(jRadioButton2)
@@ -188,7 +156,7 @@ public class ClassificationMenu extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnChoose)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,8 +190,211 @@ public class ClassificationMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         //Deklarasi string choose
         String choose = " ";
+        int a = MainMenu.cbGenre.getSelectedIndex();
+        int b = MainMenu.cbRat.getSelectedIndex();
+        ArrayList<String> c = menu.descList().get(0);
+        ArrayList<String> c1 = menu.descList().get(1);
+        ArrayList<String> c2 = menu.descList().get(2);
+        ArrayList<String> c3 = menu.descList().get(3);
+        ArrayList<String> c4 = menu.descList().get(4);
+        ArrayList<String> c5 = menu.descList().get(5);
+        ArrayList<String> c6 = menu.descList().get(6);
+        ArrayList<String> c7 = menu.descList().get(7);
+        ArrayList<String> c8 = menu.descList().get(8);
+        ArrayList<String> c9 = menu.descList().get(9);
+        ArrayList<String> c10 = menu.descList().get(10);
+        ArrayList<String> c11 = menu.descList().get(11);
+        ArrayList<String> c12 = menu.descList().get(12);
+        ArrayList<String> c13 = menu.descList().get(13);
+        ArrayList<String> c14 = menu.descList().get(14);
+        ArrayList<String> c15 = menu.descList().get(15);
+        ArrayList<String> c16 = menu.descList().get(16);
+        ArrayList<String> c17 = menu.descList().get(17);
+        ArrayList<String> c18 = menu.descList().get(18);
+        ArrayList<String> c19 = menu.descList().get(19);
+        ArrayList<String> c20 = menu.descList().get(20);
+        ArrayList<String> c21 = menu.descList().get(21);
+        ArrayList<String> c22 = menu.descList().get(22);
+        ArrayList<String> c23 = menu.descList().get(23);
+        ArrayList<String> c24 = menu.descList().get(24);
+        String d1 = c.get(0);
+        String d2 = c1.get(0);
+        String d3 = c2.get(0);
+        String d4 = c3.get(0);
+        String d5 = c4.get(0);
+        String d6 = c5.get(0);
+        String d7 = c6.get(0);
+        String d8 = c7.get(0);
+        String d9 = c8.get(0);
+        String d10 = c9.get(0);
+        String d11 = c10.get(0);
+        String d12 = c11.get(0);
+        String d13 = c12.get(0);
+        String d14 = c13.get(0);
+        String d15 = c14.get(0);
+        String d16 = c15.get(0);
+        String d17 = c16.get(0);
+        String d18 = c17.get(0);
+        String d19 = c18.get(0);
+        String d20 = c19.get(0);
+        String d21 = c20.get(0);
+        String d22 = c21.get(0);
+        String d23 = c22.get(0);
+        String d24 = c23.get(0);
+        String d25 = c24.get(0);
+        String e1 = c.get(1);
+        String e2 = c1.get(1);
+        String e3 = c2.get(1);
+        String e4 = c3.get(1);
+        String e5 = c4.get(1);
+        String e6 = c5.get(1);
+        String e7 = c6.get(1);
+        String e8 = c7.get(1);
+        String e9 = c8.get(1);
+        String e10 = c9.get(1);
+        String e11 = c10.get(1);
+        String e12 = c11.get(1);
+        String e13 = c12.get(1);
+        String e14 = c13.get(1);
+        String e15 = c14.get(1);
+        String e16 = c15.get(1);
+        String e17 = c16.get(1);
+        String e18 = c17.get(1);
+        String e19 = c18.get(1);
+        String e20 = c19.get(1);
+        String e21 = c20.get(1);
+        String e22 = c21.get(1);
+        String e23 = c22.get(1);
+        String e24 = c23.get(1);
+        String e25 = c24.get(1);
+        String f1 = c.get(2);
+        String f2 = c1.get(2);
+        String f3 = c2.get(2);
+        String f4 = c3.get(2);
+        String f5 = c4.get(2);
+        String f6 = c5.get(2);
+        String f7 = c6.get(2);
+        String f8 = c7.get(2);
+        String f9 = c8.get(2);
+        String f10 = c9.get(2);
+        String f11 = c10.get(2);
+        String f12 = c11.get(2);
+        String f13 = c12.get(2);
+        String f14 = c13.get(2);
+        String f15 = c14.get(2);
+        String f16 = c15.get(2);
+        String f17 = c16.get(2);
+        String f18 = c17.get(2);
+        String f19 = c18.get(2);
+        String f20 = c19.get(2);
+        String f21 = c20.get(2);
+        String f22 = c21.get(2);
+        String f23 = c22.get(2);
+        String f24 = c23.get(2);
+        String f25 = c24.get(2);
         //Kondisi kalau radio button 1,atau 2, atau 3 di pilih
         if (jRadioButton1.isSelected()){
+            if(a == 0){
+                if(b == 0){
+                    Result1.txtDesc.setText(d1);
+                }
+            }else if(a == 0){
+                if( b == 1){
+                    Result1.txtDesc.setText(d2);
+                }
+            }else if(a == 0){
+                if( b == 2){
+                    Result1.txtDesc.setText(d3);
+                }
+            }else if(a == 0){
+                if( b == 3){
+                    Result1.txtDesc.setText(d4);
+                }
+            }else if(a == 0){
+                if( b == 4){
+                    Result1.txtDesc.setText(d5);
+                }
+            }else if(a == 1){
+                if( b == 0){
+                    Result1.txtDesc.setText(d6);
+                }
+            }else if(a == 1){
+                if( b == 1){
+                    Result1.txtDesc.setText(d7);
+                }
+            }else if(a == 1){
+                if( b == 2){
+                    Result1.txtDesc.setText(d8);
+                }
+            }else if(a == 1){
+                if( b == 3){
+                    Result1.txtDesc.setText(d9);
+                }
+            }else if(a == 1){
+                if( b == 4){
+                    Result1.txtDesc.setText(d10);
+                }
+            }else if(a == 2){
+                if( b == 0){
+                    Result1.txtDesc.setText(d11);
+                }
+            }else if(a == 2){
+                if( b == 1){
+                    Result1.txtDesc.setText(d12);
+                }
+            }else if(a == 2){
+                if( b == 2){
+                    Result1.txtDesc.setText(d13);
+                }
+            }else if(a == 2){
+                if( b == 3){
+                    Result1.txtDesc.setText(d14);
+                }
+            }else if(a == 2){
+                if( b == 4){
+                    Result1.txtDesc.setText(d15);
+                }
+            }else if(a == 3){
+                if( b == 0){
+                    Result1.txtDesc.setText(d16);
+                }
+            }else if(a == 3){
+                if( b == 1){
+                    Result1.txtDesc.setText(d17);
+                }
+            }else if(a == 3){
+                if( b == 2){
+                    Result1.txtDesc.setText(d18);
+                }
+            }else if(a == 3){
+                if( b == 3){
+                    Result1.txtDesc.setText(d19);
+                }
+            }else if(a == 3){
+                if( b == 4){
+                    Result1.txtDesc.setText(d20);
+                }
+            }else if(a == 4){
+                if( b == 0){
+                    Result1.txtDesc.setText(d21);
+                }
+            }else if(a == 4){
+                if( b == 1){
+                    Result1.txtDesc.setText(d22);
+                }
+            }else if(a == 4){
+                if( b == 2){
+                    Result1.txtDesc.setText(d23);
+                }
+            }else if(a == 4){
+                if( b == 3){
+                    Result1.txtDesc.setText(d24);
+                }
+            }else if(a == 4){
+                if( b == 4){
+                    Result1.txtDesc.setText(d25);
+                }
+            }
             int n;
             n = JOptionPane.showConfirmDialog(
                     btnChoose,
@@ -237,6 +408,107 @@ public class ClassificationMenu extends javax.swing.JFrame {
             x.setVisible(true);
         }
        if (jRadioButton2.isSelected()){
+            if(a == 0){
+                if(b == 0){
+                    Result1.txtDesc.setText(e1);
+                }
+            }else if(a == 0){
+                if( b == 1){
+                    Result1.txtDesc.setText(e2);
+                }
+            }else if(a == 0){
+                if( b == 2){
+                    Result1.txtDesc.setText(e3);
+                }
+            }else if(a == 0){
+                if( b == 3){
+                    Result1.txtDesc.setText(e4);
+                }
+            }else if(a == 0){
+                if( b == 4){
+                    Result1.txtDesc.setText(e5);
+                }
+            }else if(a == 1){
+                if( b == 0){
+                    Result1.txtDesc.setText(e6);
+                }
+            }else if(a == 1){
+                if( b == 1){
+                    Result1.txtDesc.setText(e7);
+                }
+            }else if(a == 1){
+                if( b == 2){
+                    Result1.txtDesc.setText(e8);
+                }
+            }else if(a == 1){
+                if( b == 3){
+                    Result1.txtDesc.setText(e9);
+                }
+            }else if(a == 1){
+                if( b == 4){
+                    Result1.txtDesc.setText(e10);
+                }
+            }else if(a == 2){
+                if( b == 0){
+                    Result1.txtDesc.setText(e11);
+                }
+            }else if(a == 2){
+                if( b == 1){
+                    Result1.txtDesc.setText(e12);
+                }
+            }else if(a == 2){
+                if( b == 2){
+                    Result1.txtDesc.setText(e13);
+                }
+            }else if(a == 2){
+                if( b == 3){
+                    Result1.txtDesc.setText(e14);
+                }
+            }else if(a == 2){
+                if( b == 4){
+                    Result1.txtDesc.setText(e15);
+                }
+            }else if(a == 3){
+                if( b == 0){
+                    Result1.txtDesc.setText(e16);
+                }
+            }else if(a == 3){
+                if( b == 1){
+                    Result1.txtDesc.setText(e17);
+                }
+            }else if(a == 3){
+                if( b == 2){
+                    Result1.txtDesc.setText(e18);
+                }
+            }else if(a == 3){
+                if( b == 3){
+                    Result1.txtDesc.setText(e19);
+                }
+            }else if(a == 3){
+                if( b == 4){
+                    Result1.txtDesc.setText(e20);
+                }
+            }else if(a == 4){
+                if( b == 0){
+                    Result1.txtDesc.setText(e21);
+                }
+            }else if(a == 4){
+                if( b == 1){
+                    Result1.txtDesc.setText(e22);
+                }
+            }else if(a == 4){
+                if( b == 2){
+                    Result1.txtDesc.setText(e23);
+                }
+            }else if(a == 4){
+                if( b == 3){
+                    Result1.txtDesc.setText(e24);
+                }
+            }else if(a == 4){
+                if( b == 4){
+                    Result1.txtDesc.setText(e25);
+                }
+            }
             int n;
             n = JOptionPane.showConfirmDialog(
                     btnChoose,
@@ -250,6 +522,107 @@ public class ClassificationMenu extends javax.swing.JFrame {
             x.setVisible(true);
         }
        if (jRadioButton3.isSelected()){
+               if(a == 0){
+                if(b == 0){
+                    Result1.txtDesc.setText(f1);
+                }
+            }else if(a == 0){
+                if( b == 1){
+                    Result1.txtDesc.setText(f2);
+                }
+            }else if(a == 0){
+                if( b == 2){
+                    Result1.txtDesc.setText(f3);
+                }
+            }else if(a == 0){
+                if( b == 3){
+                    Result1.txtDesc.setText(f4);
+                }
+            }else if(a == 0){
+                if( b == 4){
+                    Result1.txtDesc.setText(f5);
+                }
+            }else if(a == 1){
+                if( b == 0){
+                    Result1.txtDesc.setText(f6);
+                }
+            }else if(a == 1){
+                if( b == 1){
+                    Result1.txtDesc.setText(f7);
+                }
+            }else if(a == 1){
+                if( b == 2){
+                    Result1.txtDesc.setText(f8);
+                }
+            }else if(a == 1){
+                if( b == 3){
+                    Result1.txtDesc.setText(f9);
+                }
+            }else if(a == 1){
+                if( b == 4){
+                    Result1.txtDesc.setText(f10);
+                }
+            }else if(a == 2){
+                if( b == 0){
+                    Result1.txtDesc.setText(f11);
+                }
+            }else if(a == 2){
+                if( b == 1){
+                    Result1.txtDesc.setText(f12);
+                }
+            }else if(a == 2){
+                if( b == 2){
+                    Result1.txtDesc.setText(f13);
+                }
+            }else if(a == 2){
+                if( b == 3){
+                    Result1.txtDesc.setText(f14);
+                }
+            }else if(a == 2){
+                if( b == 4){
+                    Result1.txtDesc.setText(f15);
+                }
+            }else if(a == 3){
+                if( b == 0){
+                    Result1.txtDesc.setText(f16);
+                }
+            }else if(a == 3){
+                if( b == 1){
+                    Result1.txtDesc.setText(f17);
+                }
+            }else if(a == 3){
+                if( b == 2){
+                    Result1.txtDesc.setText(f18);
+                }
+            }else if(a == 3){
+                if( b == 3){
+                    Result1.txtDesc.setText(f19);
+                }
+            }else if(a == 3){
+                if( b == 4){
+                    Result1.txtDesc.setText(f20);
+                }
+            }else if(a == 4){
+                if( b == 0){
+                    Result1.txtDesc.setText(f21);
+                }
+            }else if(a == 4){
+                if( b == 1){
+                    Result1.txtDesc.setText(f22);
+                }
+            }else if(a == 4){
+                if( b == 2){
+                    Result1.txtDesc.setText(f23);
+                }
+            }else if(a == 4){
+                if( b == 3){
+                    Result1.txtDesc.setText(f24);
+                }
+            }else if(a == 4){
+                if( b == 4){
+                    Result1.txtDesc.setText(f25);
+                }
+            }
             int n;
             n = JOptionPane.showConfirmDialog(
                     btnChoose,
@@ -262,7 +635,12 @@ public class ClassificationMenu extends javax.swing.JFrame {
             Result1.txtRating.setText(ClassificationMenu.lblRating3.getText());
             x.setVisible(true);
         }
+       
     }//GEN-LAST:event_btnChooseActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,18 +669,8 @@ public class ClassificationMenu extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //List of movies name
-        ArrayList<String> rating = new ArrayList<String>();
-          rating.add("*");
-          rating.add("**");
-          rating.add("***");
-          rating.add("****");
-          rating.add("*****");
-        ArrayList<String> movies = new ArrayList<String>();
-        movies.add("Jurassic Park 2");
-        movies.add("Big Hero 6");
-        movies.add("My Gangnam Beauty");
-         
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -314,9 +682,6 @@ public class ClassificationMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnChoose;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButton1;
@@ -331,8 +696,5 @@ public class ClassificationMenu extends javax.swing.JFrame {
     public static javax.swing.JLabel lblRating1;
     public static javax.swing.JLabel lblRating2;
     public static javax.swing.JLabel lblRating3;
-    public static javax.swing.JLabel lblYear1;
-    public static javax.swing.JLabel lblYear2;
-    public static javax.swing.JLabel lblYear3;
     // End of variables declaration//GEN-END:variables
 }
