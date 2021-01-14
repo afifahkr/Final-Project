@@ -13,6 +13,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -30,7 +31,7 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
-       Image icon = Toolkit.getDefaultToolkit().getImage("src/finalproject/Logo2.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/finalproject/Logo2.png");
         setIconImage(icon);
         setTitle("DP MSE");
     }
@@ -100,7 +101,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel1.setText("Genre");
 
         cbGenre.setFont(new java.awt.Font("Sylfaen", 1, 11)); // NOI18N
-        cbGenre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbGenre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Horror", "Action", "Fantasy", "Romance", "Drama" }));
         cbGenre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbGenreActionPerformed(evt);
@@ -111,7 +112,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel4.setText("Rating");
 
         cbRat.setFont(new java.awt.Font("Sylfaen", 1, 11)); // NOI18N
-        cbRat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbRat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "*", "**", "***", "****", "*****" }));
         cbRat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbRatActionPerformed(evt);
@@ -171,6 +172,9 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(149, Short.MAX_VALUE))
         );
+
+        cbGenre.getAccessibleContext().setAccessibleName("");
+        cbGenre.getAccessibleContext().setAccessibleDescription("");
 
         jPanel5.setBackground(new java.awt.Color(0, 206, 201));
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255)));
@@ -252,21 +256,12 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void cbGenreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbGenreActionPerformed
         // TODO add your handling code here:
-       String[] genreString = { "Horror", "Drama", "Romance", "Fantasy", "Action" };
-       cbGenre genreList = new cbGenre(genreString);
-       genreList.setSelectedIndex(4);
-       genreList.addActionListener(this);
-       this.setVisible(true);
-        
+
     }//GEN-LAST:event_cbGenreActionPerformed
 
     private void cbRatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRatActionPerformed
         // TODO add your handling code here:
-       String[] ratString = { "*", "**", "***", "****", "*****" };
-       cbRat ratList = new cbRat(ratString);
-       ratList.setSelectedIndex(4);
-       ratList.addActionListener(this);
-       this.setVisible(true);
+       
     }//GEN-LAST:event_cbRatActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -293,6 +288,27 @@ public class MainMenu extends javax.swing.JFrame {
         String g4 = e4.get(1);
         String h4 = e4.get(2);
        
+        ArrayList<String> ed = menu.actionList().get(0);
+        ArrayList<String> ed1 = menu.actionList().get(1);
+        ArrayList<String> ed2 = menu.actionList().get(2);
+        ArrayList<String> ed3= menu.actionList().get(3);
+        ArrayList<String> ed4 = menu.actionList().get(4);
+        String fd = ed.get(0);
+        String gd = ed.get(1);
+        String hd = ed.get(2);
+        String fd1 = ed1.get(0);
+        String gd1 = ed1.get(1);
+        String hd1 = ed1.get(2);
+        String fd2 = ed2.get(0);
+        String gd2 = ed2.get(1);
+        String hd2 = ed2.get(2);
+        String fd3 = ed3.get(0);
+        String gd3 = ed3.get(1);
+        String hd3 = ed3.get(2);
+        String fd4 = ed4.get(0);
+        String gd4 = ed4.get(1);
+        String hd4 = ed4.get(2);
+        
         ArrayList<String> ea = menu.fantasyList().get(0);
         ArrayList<String> ea1 = menu.fantasyList().get(1);
         ArrayList<String> ea2 = menu.fantasyList().get(2);
@@ -313,27 +329,6 @@ public class MainMenu extends javax.swing.JFrame {
         String fa4 = ea4.get(0);
         String ga4 = ea4.get(1);
         String ha4 = ea4.get(2);
-        
-        ArrayList<String> eb = menu.dramaList().get(0);
-        ArrayList<String> eb1 = menu.dramaList().get(1);
-        ArrayList<String> eb2 = menu.dramaList().get(2);
-        ArrayList<String> eb3= menu.dramaList().get(3);
-        ArrayList<String> eb4 = menu.dramaList().get(4);
-        String fb = eb.get(0);
-        String gb = eb.get(1);
-        String hb = eb.get(2);
-        String fb1 = eb1.get(0);
-        String gb1 = eb1.get(1);
-        String hb1 = eb1.get(2);
-        String fb2 = eb2.get(0);
-        String gb2 = eb2.get(1);
-        String hb2 = eb2.get(2);
-        String fb3 = eb3.get(0);
-        String gb3 = eb3.get(1);
-        String hb3 = eb3.get(2);
-        String fb4 = eb4.get(0);
-        String gb4 = eb4.get(1);
-        String hb4 = eb4.get(2);
         
         ArrayList<String> ec = menu.romanceList().get(0);
         ArrayList<String> ec1 = menu.romanceList().get(1);
@@ -356,26 +351,30 @@ public class MainMenu extends javax.swing.JFrame {
         String gc4 = ec4.get(1);
         String hc4 = ec4.get(2);
         
-        ArrayList<String> ed = menu.actionList().get(0);
-        ArrayList<String> ed1 = menu.actionList().get(1);
-        ArrayList<String> ed2 = menu.actionList().get(2);
-        ArrayList<String> ed3= menu.actionList().get(3);
-        ArrayList<String> ed4 = menu.actionList().get(4);
-        String fd = ed.get(0);
-        String gd = ed.get(1);
-        String hd = ed.get(2);
-        String fd1 = ed1.get(0);
-        String gd1 = ed1.get(1);
-        String hd1 = ed1.get(2);
-        String fd2 = ed2.get(0);
-        String gd2 = ed2.get(1);
-        String hd2 = ed2.get(2);
-        String fd3 = ed3.get(0);
-        String gd3 = ed3.get(1);
-        String hd3 = ed3.get(2);
-        String fd4 = ed4.get(0);
-        String gd4 = ed4.get(1);
-        String hd4 = ed4.get(2);
+        ArrayList<String> eb = menu.dramaList().get(0);
+        ArrayList<String> eb1 = menu.dramaList().get(1);
+        ArrayList<String> eb2 = menu.dramaList().get(2);
+        ArrayList<String> eb3= menu.dramaList().get(3);
+        ArrayList<String> eb4 = menu.dramaList().get(4);
+        String fb = eb.get(0);
+        String gb = eb.get(1);
+        String hb = eb.get(2);
+        String fb1 = eb1.get(0);
+        String gb1 = eb1.get(1);
+        String hb1 = eb1.get(2);
+        String fb2 = eb2.get(0);
+        String gb2 = eb2.get(1);
+        String hb2 = eb2.get(2);
+        String fb3 = eb3.get(0);
+        String gb3 = eb3.get(1);
+        String hb3 = eb3.get(2);
+        String fb4 = eb4.get(0);
+        String gb4 = eb4.get(1);
+        String hb4 = eb4.get(2);
+        
+        
+        
+       
         
  
        
@@ -801,7 +800,7 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JComboBox<String> cbGenre;
+    public javax.swing.JComboBox<String> cbGenre;
     public static javax.swing.JComboBox<String> cbRat;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

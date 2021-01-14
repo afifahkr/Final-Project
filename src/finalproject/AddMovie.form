@@ -170,7 +170,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtInsMovie">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Insert..."/>
+            <Property name="name" type="java.lang.String" value="1" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtInsMovieActionPerformed"/>
@@ -201,11 +201,12 @@
         <Component class="javax.swing.JComboBox" name="cbGenre">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="5">
+                <StringItem index="0" value="Horror"/>
+                <StringItem index="1" value="Action"/>
+                <StringItem index="2" value="Fantasy"/>
+                <StringItem index="3" value="Romance"/>
+                <StringItem index="4" value="Drama"/>
               </StringArray>
             </Property>
           </Properties>
@@ -219,11 +220,12 @@
         <Component class="javax.swing.JComboBox" name="cbRat">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="5">
+                <StringItem index="0" value="*"/>
+                <StringItem index="1" value="**"/>
+                <StringItem index="2" value="***"/>
+                <StringItem index="3" value="****"/>
+                <StringItem index="4" value="*****"/>
               </StringArray>
             </Property>
           </Properties>

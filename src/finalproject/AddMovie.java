@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -51,6 +52,7 @@ public class AddMovie extends javax.swing.JFrame {
         ArrayList<ArrayList<String>> horror = new ArrayList<ArrayList<String>>();
         //horror
         ArrayList<String> horror1 = new ArrayList<String>();
+        
         ArrayList<String> horror2 = new ArrayList<String>();
         ArrayList<String> horror3 = new ArrayList<String>();
         ArrayList<String> horror4 = new ArrayList<String>();
@@ -81,8 +83,6 @@ public class AddMovie extends javax.swing.JFrame {
         ArrayList<String> romance5 = new ArrayList<String>();
        
         
-        String movname = txtInsMovie.getText();
-        String tahun = txtInsYear.getText();
         
         
         ArrayList<ArrayList<String>> drama = new ArrayList<ArrayList<String>>();
@@ -95,7 +95,10 @@ public class AddMovie extends javax.swing.JFrame {
      */
     public AddMovie() {
         initComponents();
+        
     }
+    
+
    public ArrayList<ArrayList<String>> horrorList(){
        return horror;
    }
@@ -177,7 +180,7 @@ public class AddMovie extends javax.swing.JFrame {
 
         jLabel4.setText("Year");
 
-        txtInsMovie.setText("Insert...");
+        txtInsMovie.setName("1"); // NOI18N
         txtInsMovie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInsMovieActionPerformed(evt);
@@ -193,14 +196,14 @@ public class AddMovie extends javax.swing.JFrame {
 
         txtDesc.setText("Insert Description");
 
-        cbGenre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbGenre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Horror", "Action", "Fantasy", "Romance", "Drama" }));
         cbGenre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbGenreActionPerformed(evt);
             }
         });
 
-        cbRat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbRat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "*", "**", "***", "****", "*****" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -267,7 +270,8 @@ public class AddMovie extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAddActionPerformed
-        
+        String tahun = txtInsYear.getText();
+        String movname = txtInsMovie.getText();
         String a = cbGenre.getSelectedItem().toString();
         String b = cbRat.getSelectedItem().toString();
         int c = cbGenre.getSelectedIndex();
@@ -482,14 +486,13 @@ public class AddMovie extends javax.swing.JFrame {
 
     private void txtInsMovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInsMovieActionPerformed
         // TODO add your handling code here:
-        
+        txtInsMovie.setText(" ");
         
     }//GEN-LAST:event_txtInsMovieActionPerformed
 
     private void txtInsYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInsYearActionPerformed
         // TODO add your handling code here:
- 
-
+        txtInsYear.setText(" ");
     }//GEN-LAST:event_txtInsYearActionPerformed
 
     /**
@@ -519,7 +522,8 @@ public class AddMovie extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
+ 
+      
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
