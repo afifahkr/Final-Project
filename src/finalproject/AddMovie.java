@@ -50,6 +50,7 @@ public class AddMovie extends javax.swing.JFrame {
         ArrayList<String> deskripsi24 = new ArrayList<String>();
         ArrayList<String> deskripsi25 = new ArrayList<String>();
         ArrayList<ArrayList<String>> horror = new ArrayList<ArrayList<String>>();
+        
         //horror
         ArrayList<String> horror1 = new ArrayList<String>();
         
@@ -117,7 +118,7 @@ public class AddMovie extends javax.swing.JFrame {
    public ArrayList<ArrayList<String>> descList(){
        return deskripsi;
    }
-
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -270,6 +271,7 @@ public class AddMovie extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAddActionPerformed
+        
         String tahun = txtInsYear.getText();
         String movname = txtInsMovie.getText();
         String a = cbGenre.getSelectedItem().toString();
@@ -279,7 +281,7 @@ public class AddMovie extends javax.swing.JFrame {
         if(c == 0 && d == 0 ){
             rating.add(b);
             genre.add(a);
-            horror.set(0, horror1);
+        
             horror1.add(movname + tahun);   
             deskripsi.set(0, deskripsi1);
             deskripsi1.add(txtDesc.toString());
@@ -287,7 +289,7 @@ public class AddMovie extends javax.swing.JFrame {
         } else if (c == 0 && d == 1){
             rating.add(b);
             genre.add(a);
-            horror.set(1, horror2);
+   
             horror2.add(movname+ tahun);
             deskripsi.set(0, deskripsi2);
             deskripsi2.add(txtDesc.toString());
@@ -295,7 +297,7 @@ public class AddMovie extends javax.swing.JFrame {
         } else if (c == 0 && d == 2){
             rating.add(b);
             genre.add(a);
-            horror.set(2, horror3);
+       
             horror3.add(movname + tahun);
             deskripsi.set(0, deskripsi3);
             deskripsi3.add(txtDesc.toString());
@@ -303,6 +305,7 @@ public class AddMovie extends javax.swing.JFrame {
             rating.add(b);
             genre.add(a);
             horror.set(3, horror4);
+            
             horror4.add(movname + tahun);
             deskripsi.set(0, deskripsi4);
             deskripsi4.add(txtDesc.toString());
@@ -319,7 +322,7 @@ public class AddMovie extends javax.swing.JFrame {
 
             rating.add(b);
             genre.add(a);
-            action.set(0, action1);
+  
             action1.add(movname + tahun);
             deskripsi.set(0, deskripsi6);
             deskripsi6.add(txtDesc.toString());
@@ -327,7 +330,7 @@ public class AddMovie extends javax.swing.JFrame {
 
             rating.add(b);
             genre.add(a);
-             action.set(1, action2);
+
             action2.add(movname + tahun);
             deskripsi.set(0, deskripsi7);
             deskripsi7.add(txtDesc.toString());
@@ -335,25 +338,19 @@ public class AddMovie extends javax.swing.JFrame {
 
             rating.add(b);
             genre.add(a);
-             action.set(2, action3);
             action3.add(movname + tahun);
-            deskripsi.set(0, deskripsi8);
             deskripsi8.add(txtDesc.toString());
         } else if (c == 1 && d == 3){
 
            rating.add(b);
             genre.add(a);
-             action.set(3, action4);
             action4.add(movname + tahun);
-            deskripsi.set(0, deskripsi9);
             deskripsi9.add(txtDesc.toString());
         } else if (c == 1 && d == 4){
 
             rating.add(b);
             genre.add(a);
-             action.set(4, action5);
             action5.add(movname + tahun);
-            deskripsi.set(0, deskripsi10);
             deskripsi10.add(txtDesc.toString());
         } else if (c == 2 && d == 0){
 
@@ -367,113 +364,113 @@ public class AddMovie extends javax.swing.JFrame {
 
             rating.add(b);
             genre.add(a);
-             fantasy.set(1, fantasy2);
+
             fantasy2.add(movname + tahun);
-            deskripsi.set(0, deskripsi12);
+
             deskripsi12.add(txtDesc.toString());
         } else if (c == 2 && d == 2){
 
            rating.add(b);
             genre.add(a);
-             fantasy.set(2, fantasy3);
+      
             fantasy3.add(movname + tahun);
-            deskripsi.set(0, deskripsi13);
+   
             deskripsi13.add(txtDesc.toString());
         } else if (c == 2 && d == 3){
 
             rating.add(b);
             genre.add(a);
-             fantasy.set(3, fantasy4);
+
             fantasy4.add(movname + tahun);
-            deskripsi.set(0, deskripsi14);
+      
             deskripsi14.add(txtDesc.toString());
         } else if (c == 2 && d == 4){
 
             rating.add(b);
             genre.add(a);
-             fantasy.set(4, fantasy5);
+ 
             fantasy5.add(movname + tahun);
-            deskripsi.set(0, deskripsi15);
+    
             deskripsi15.add(txtDesc.toString());
         } else if (c == 3 && d == 0){
 
             rating.add(b);
             genre.add(a);
-            romance.set(0, romance1);
+      
             romance1.add(movname + tahun);
-            deskripsi.set(0, deskripsi16);
+   
             deskripsi16.add(txtDesc.toString());
         } else if (c == 3 && d == 1){
 
            rating.add(b);
             genre.add(a);
-            romance.set(1, romance2);
+        
             romance2.add(movname + tahun);
-            deskripsi.set(0, deskripsi17);
+      
             deskripsi17.add(txtDesc.toString());
         } else if (c == 3 && d == 2){
 
             rating.add(b);
             genre.add(a);
-            romance.set(2, romance3);
+      
             romance3.add(movname + tahun);
-            deskripsi.set(0, deskripsi18);
+
             deskripsi18.add(txtDesc.toString());
         } else if (c == 3 && d == 3){
 
             rating.add(b);
             genre.add(a);
-            romance.set(3, romance4);
+         
             romance4.add(movname + tahun);
-            deskripsi.set(0, deskripsi19);
+           
             deskripsi19.add(txtDesc.toString());
         } else if (c == 3 && d == 4){
 
             rating.add(b);
             genre.add(a);
-            romance.set(4, romance5);
+       
             romance5.add(movname + tahun);
-            deskripsi.set(0, deskripsi20);
+     
             deskripsi20.add(txtDesc.toString());
         } else if (c == 4 && d == 0){
 
           rating.add(b);
             genre.add(a);
-            drama.set(0, drama1);
+      
             drama1.add(movname + tahun);
-            deskripsi.set(0, deskripsi21);
+   
             deskripsi21.add(txtDesc.toString());
         } else if (c == 4 && d == 1){
 
             rating.add(b);
             genre.add(a);
-            drama.set(1, drama2);
+    
             drama2.add(movname + tahun);
-            deskripsi.set(0, deskripsi22);
+      
             deskripsi22.add(txtDesc.toString());
         } else if (c == 4 && d == 2){
 
             rating.add(b);
             genre.add(a);
-            drama.set(2, drama3);
+         
             drama3.add(movname + tahun);
-            deskripsi.set(0, deskripsi23);
+
             deskripsi23.add(txtDesc.toString());
         } else if (c == 4 && d == 3){
 
             rating.add(b);
             genre.add(a);
-            drama.set(3, drama4);
+            
             drama4.add(movname + tahun);
-            deskripsi.set(0, deskripsi24);
+            
             deskripsi24.add(txtDesc.toString());
         } else if (c == 4 && d == 4){
 
             rating.add(b);
             genre.add(a);
-            drama.set(4, drama5);
+          
             drama5.add(movname + tahun);
-            deskripsi.set(0, deskripsi25);
+         
             deskripsi25.add(txtDesc.toString());
         }
        
@@ -548,5 +545,9 @@ public class AddMovie extends javax.swing.JFrame {
     public static javax.swing.JTextField txtInsMovie;
     public static javax.swing.JTextField txtInsYear;
     // End of variables declaration//GEN-END:variables
+
+    Object horrorList(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
