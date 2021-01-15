@@ -281,197 +281,235 @@ public class AddMovie extends javax.swing.JFrame {
         if(c == 0 && d == 0 ){
             rating.add(b);
             genre.add(a);
+            if(horror.size() < 1 && deskripsi.size()< 1){
+                horror.add(horror1);
+                deskripsi.add(deskripsi1);
+            }horror1.add(movname + tahun);
+             deskripsi1.add(txtDesc.toString());
+              
         
-            horror1.add(movname + tahun);   
-            deskripsi.set(0, deskripsi1);
-            deskripsi1.add(txtDesc.toString());
             
+      
         } else if (c == 0 && d == 1){
             rating.add(b);
             genre.add(a);
-   
-            horror2.add(movname+ tahun);
-            deskripsi.set(0, deskripsi2);
+             if(horror.size() < 2 && deskripsi.size()< 2){
+                horror.add(horror2);
+                deskripsi.add(deskripsi2);
+             }horror2.add(movname+ tahun);
             deskripsi2.add(txtDesc.toString());
+            
             
         } else if (c == 0 && d == 2){
             rating.add(b);
             genre.add(a);
-       
-            horror3.add(movname + tahun);
-            deskripsi.set(0, deskripsi3);
+            if(horror.size() < 3 && deskripsi.size()< 3){
+                horror.add(horror3);
+                deskripsi.add(deskripsi3);
+             }horror3.add(movname+ tahun);
             deskripsi3.add(txtDesc.toString());
         } else if (c == 0 && d == 3){
             rating.add(b);
             genre.add(a);
-            horror.set(3, horror4);
-            
-            horror4.add(movname + tahun);
-            deskripsi.set(0, deskripsi4);
+           if(horror.size() < 4 && deskripsi.size()< 4){
+                horror.add(horror4);
+                deskripsi.add(deskripsi4);
+             }horror4.add(movname+ tahun);
             deskripsi4.add(txtDesc.toString());
             
         } else if (c == 0 && d == 4){
  
             rating.add(b);
             genre.add(a);
-            horror.set(4, horror5);
-            horror5.add(movname + tahun);
-            deskripsi.set(0, deskripsi5);
-            deskripsi5.add(txtDesc.toString());
+           if(horror.size() < 5 && deskripsi.size()< 5){
+                horror.add(horror5);
+                deskripsi.add(deskripsi5);
+             }horror5.add(movname+ tahun);
+              deskripsi5.add(txtDesc.toString());
         } else if (c == 1 && d == 0){
 
             rating.add(b);
             genre.add(a);
-  
-            action1.add(movname + tahun);
-            deskripsi.set(0, deskripsi6);
-            deskripsi6.add(txtDesc.toString());
+            if(action.size() < 1 && deskripsi.size()< 6){
+                action.add(action1);
+                deskripsi.add(deskripsi6);
+             }action1.add(movname+ tahun);
+              deskripsi6.add(txtDesc.toString());
         } else if (c == 1 && d == 1){
 
             rating.add(b);
             genre.add(a);
-
-            action2.add(movname + tahun);
-            deskripsi.set(0, deskripsi7);
-            deskripsi7.add(txtDesc.toString());
+                if(action.size() < 2 && deskripsi.size()< 7){
+                action.add(action2);
+                deskripsi.add(deskripsi7);
+             }action2.add(movname+ tahun);
+              deskripsi7.add(txtDesc.toString());
         } else if (c == 1 && d == 2){
 
             rating.add(b);
             genre.add(a);
-            action3.add(movname + tahun);
-            deskripsi8.add(txtDesc.toString());
+            if(action.size() < 3 && deskripsi.size()< 8){
+                action.add(action3);
+                deskripsi.add(deskripsi8);
+             }action3.add(movname+ tahun);
+              deskripsi8.add(txtDesc.toString());
         } else if (c == 1 && d == 3){
 
            rating.add(b);
             genre.add(a);
-            action4.add(movname + tahun);
-            deskripsi9.add(txtDesc.toString());
+           if(action.size() < 4 && deskripsi.size()< 9){
+                action.add(action4);
+                deskripsi.add(deskripsi9);
+             }action4.add(movname+ tahun);
+              deskripsi9.add(txtDesc.toString());
         } else if (c == 1 && d == 4){
 
             rating.add(b);
             genre.add(a);
-            action5.add(movname + tahun);
-            deskripsi10.add(txtDesc.toString());
+           if(action.size() < 5 && deskripsi.size()< 10){
+                action.add(action5);
+                deskripsi.add(deskripsi10);
+             }action5.add(movname+ tahun);
+              deskripsi10.add(txtDesc.toString());
         } else if (c == 2 && d == 0){
 
             rating.add(b);
             genre.add(a);
-            fantasy.set(0, fantasy1);
-            fantasy1.add(movname + tahun);
-            deskripsi.set(0, deskripsi11);
-            deskripsi11.add(txtDesc.toString());
+           if(fantasy.size() < 1 && deskripsi.size()< 11){
+                fantasy.add(fantasy1);
+                deskripsi.add(deskripsi11);
+             }fantasy1.add(movname+ tahun);
+              deskripsi11.add(txtDesc.toString());
         } else if (c == 2 && d == 1){
 
             rating.add(b);
             genre.add(a);
-
-            fantasy2.add(movname + tahun);
-
-            deskripsi12.add(txtDesc.toString());
+             if(fantasy.size() < 2 && deskripsi.size()< 12){
+                fantasy.add(fantasy2);
+                deskripsi.add(deskripsi12);
+             }fantasy2.add(movname+ tahun);
+              deskripsi12.add(txtDesc.toString());
         } else if (c == 2 && d == 2){
 
            rating.add(b);
             genre.add(a);
-      
-            fantasy3.add(movname + tahun);
-   
-            deskripsi13.add(txtDesc.toString());
+            if(fantasy.size() < 3 && deskripsi.size()< 13){
+                fantasy.add(fantasy3);
+                deskripsi.add(deskripsi13);
+             }fantasy3.add(movname+ tahun);
+              deskripsi13.add(txtDesc.toString());
         } else if (c == 2 && d == 3){
 
             rating.add(b);
             genre.add(a);
-
-            fantasy4.add(movname + tahun);
-      
-            deskripsi14.add(txtDesc.toString());
+             if(fantasy.size() < 4 && deskripsi.size()< 14){
+                fantasy.add(fantasy4);
+                deskripsi.add(deskripsi14);
+             }fantasy4.add(movname+ tahun);
+              deskripsi14.add(txtDesc.toString());
         } else if (c == 2 && d == 4){
 
             rating.add(b);
             genre.add(a);
- 
-            fantasy5.add(movname + tahun);
-    
-            deskripsi15.add(txtDesc.toString());
+                 if(fantasy.size() < 5 && deskripsi.size()< 15){
+                fantasy.add(fantasy5);
+                deskripsi.add(deskripsi15);
+             }fantasy5.add(movname+ tahun);
+              deskripsi15.add(txtDesc.toString());
         } else if (c == 3 && d == 0){
 
             rating.add(b);
             genre.add(a);
       
-            romance1.add(movname + tahun);
-   
-            deskripsi16.add(txtDesc.toString());
+           if(romance.size() < 1 && deskripsi.size()< 16){
+                romance.add(romance1);
+                deskripsi.add(deskripsi16);
+             }romance1.add(movname+ tahun);
+              deskripsi16.add(txtDesc.toString());
         } else if (c == 3 && d == 1){
 
            rating.add(b);
             genre.add(a);
         
-            romance2.add(movname + tahun);
-      
-            deskripsi17.add(txtDesc.toString());
+             if(romance.size() < 2 && deskripsi.size()< 17){
+                romance.add(romance2);
+                deskripsi.add(deskripsi17);
+             }romance2.add(movname+ tahun);
+              deskripsi17.add(txtDesc.toString());
         } else if (c == 3 && d == 2){
 
             rating.add(b);
             genre.add(a);
-      
-            romance3.add(movname + tahun);
-
-            deskripsi18.add(txtDesc.toString());
+                if(romance.size() < 3 && deskripsi.size()< 18){
+                romance.add(romance3);
+                deskripsi.add(deskripsi18);
+             }romance3.add(movname+ tahun);
+              deskripsi18.add(txtDesc.toString());
         } else if (c == 3 && d == 3){
 
             rating.add(b);
             genre.add(a);
          
-            romance4.add(movname + tahun);
-           
-            deskripsi19.add(txtDesc.toString());
+            if(romance.size() < 4 && deskripsi.size()< 19){
+                romance.add(romance4);
+                deskripsi.add(deskripsi19);
+             }romance4.add(movname+ tahun);
+              deskripsi19.add(txtDesc.toString());
         } else if (c == 3 && d == 4){
 
             rating.add(b);
             genre.add(a);
        
-            romance5.add(movname + tahun);
-     
-            deskripsi20.add(txtDesc.toString());
+            if(romance.size() < 5 && deskripsi.size()< 20){
+                romance.add(romance5);
+                deskripsi.add(deskripsi20);
+             }romance5.add(movname+ tahun);
+              deskripsi20.add(txtDesc.toString());
         } else if (c == 4 && d == 0){
 
           rating.add(b);
             genre.add(a);
-      
-            drama1.add(movname + tahun);
-   
-            deskripsi21.add(txtDesc.toString());
+        if(drama.size() < 1 && deskripsi.size()< 21){
+                drama.add(drama1);
+                deskripsi.add(deskripsi21);
+             }drama1.add(movname+ tahun);
+              deskripsi21.add(txtDesc.toString());
         } else if (c == 4 && d == 1){
 
             rating.add(b);
             genre.add(a);
-    
-            drama2.add(movname + tahun);
-      
-            deskripsi22.add(txtDesc.toString());
+            if(drama.size() < 2 && deskripsi.size()< 22){
+                drama.add(drama2);
+                deskripsi.add(deskripsi22);
+             }drama2.add(movname+ tahun);
+              deskripsi22.add(txtDesc.toString());
         } else if (c == 4 && d == 2){
 
             rating.add(b);
             genre.add(a);
-         
-            drama3.add(movname + tahun);
-
-            deskripsi23.add(txtDesc.toString());
+         if(drama.size() < 3 && deskripsi.size()< 23){
+                drama.add(drama3);
+                deskripsi.add(deskripsi23);
+             }drama3.add(movname+ tahun);
+              deskripsi23.add(txtDesc.toString());
         } else if (c == 4 && d == 3){
 
             rating.add(b);
             genre.add(a);
-            
-            drama4.add(movname + tahun);
-            
-            deskripsi24.add(txtDesc.toString());
+          if(drama.size() < 4 && deskripsi.size()< 24){
+                drama.add(drama4);
+                deskripsi.add(deskripsi24);
+             }drama4.add(movname+ tahun);
+              deskripsi24.add(txtDesc.toString());
         } else if (c == 4 && d == 4){
 
             rating.add(b);
             genre.add(a);
-          
-            drama5.add(movname + tahun);
-         
-            deskripsi25.add(txtDesc.toString());
+       if(drama.size() < 5 && deskripsi.size()< 25){
+                drama.add(drama5);
+                deskripsi.add(deskripsi25);
+             }drama5.add(movname+ tahun);
+              deskripsi25.add(txtDesc.toString());
         }
        
     }//GEN-LAST:event_BtnAddActionPerformed
